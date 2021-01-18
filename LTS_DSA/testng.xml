@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+
+		<listener class-name="Common.TestListener" />
+
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+    <class name="TestFunctions.LoginFunctions"/>
+    <class name="TestFunctions.AdminProfileFunctions"/>
+    <class name="TestFunctions.SettingsFunctions_CourseOfStudy"/>
+      <class name="TestFunctions.SettingsFunctions_Organisation"/>
+      <class name="TestFunctions.SettingsFunctions_Institution"/>   
+      <class name="TestFunctions.SettingsFunctions_SupportType"/>
+      <class name="TestFunctions.SettingsFunctions_Role"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
