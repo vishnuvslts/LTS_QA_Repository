@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,8 +17,11 @@ WebDriver driver ;
 	
 	//Select user type for login
 	@FindBy(xpath= "//a[@class='nav-link dropdown-toggle user-dp-toggle']")WebElement ViewUserBtn;
-	@FindBy(xpath= "(//span[@class='dropdown-item crsr-pntr'])[1]']")WebElement LogoutBtn;
+	@FindBy(xpath= "//span[text()='Logout']")WebElement LogoutBtn;
 	
+	//Common
+		@FindBy(xpath= "//a[@class='navbar-brand']")WebElement HomeBtn;
+		@FindBy(xpath= "//img[@alt='dsa-logo']")List <WebElement> DSALogo;
 	public WebElement ViewUserBtn()
 	{
 		return ViewUserBtn;
@@ -25,5 +30,15 @@ WebDriver driver ;
 	public WebElement LogoutBtn()
 	{
 		return LogoutBtn;
+	}
+	
+	public WebElement HomeBtn()
+	{
+		return HomeBtn;
+	}
+	
+	public List <WebElement> DSALogo()
+	{
+		return DSALogo;
 	}
 }
