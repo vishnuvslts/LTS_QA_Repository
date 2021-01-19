@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_Institution extends BaseClass {
+public class SettingsFunctions_Manage_Institution extends BaseClass {
 	
 	public static WebDriverWait wait;
 	@Test(priority =1)

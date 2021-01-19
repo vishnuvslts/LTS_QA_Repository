@@ -8,31 +8,31 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_SupportType extends BaseClass {
+public class SettingsFunctions_Manage_Organisation extends BaseClass {
 	
 	public static WebDriverWait wait;
 	@Test(priority =1)
-	public void addSupportType() throws InterruptedException {
+	public void addOrganisation() throws InterruptedException {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		objects.HomeBtn().click();
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.SupportTypeSubModule()));
-		objects.SupportTypeSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.OrganisationSubModule()));
+		objects.OrganisationSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
 		objects.AddNew().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterSupportTypeNameField()));
-		objects.EnterSupportTypeNameField().sendKeys(prop.getProperty("SupportTypeName"));
-		objects.EnterSupportTypeDescField().sendKeys(prop.getProperty("SupportTypeDesc"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterOrganisationNameField()));
+		objects.EnterOrganisationNameField().sendKeys(prop.getProperty("OrganisationName"));
+		objects.EnterOrganisationDescField().sendKeys(prop.getProperty("OrganisationDesc"));
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		if (toastsuccessMessage.contentEquals("Support type created successfully.")) {
-			Assert.assertEquals(toastsuccessMessage, "Support type created successfully.");
-			System.out.println("Verify create SupportType executed and passed successfully!!!   "+toastsuccessMessage);
+		if (toastsuccessMessage.contentEquals("Organisation created successfully.")) {
+			Assert.assertEquals(toastsuccessMessage, "Organisation created successfully.");
+			System.out.println("Verify create organisation executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 
 		else {
@@ -44,13 +44,13 @@ public class SettingsFunctions_SupportType extends BaseClass {
 		}
 		
 		Thread.sleep(3000);
-		objects.searchField().sendKeys(prop.getProperty("SupportTypeName"));
+		objects.searchField().sendKeys(prop.getProperty("OrganisationName"));
 		Thread.sleep(3000);
 		String addedentry = objects.entrySearched().getText();
-		if (addedentry.contentEquals(prop.getProperty("SupportTypeName"))) {
-			Assert.assertEquals(addedentry, prop.getProperty("SupportTypeName"));
+		if (addedentry.contentEquals(prop.getProperty("OrganisationName"))) {
+			Assert.assertEquals(addedentry, prop.getProperty("OrganisationName"));
 			System.out.println(
-					"Verify SupportType list executed & passed successfully!!!   New SupportType added is "
+					"Verify organisation list executed & passed successfully!!!   New organisation added is "
 							+ addedentry);
 
 		} else {
@@ -60,20 +60,20 @@ public class SettingsFunctions_SupportType extends BaseClass {
 			System.out.println("Test failure observed");
 		}
 		
-		
+			
 	}
 	
-	@Test(priority =2, dependsOnMethods = { "addSupportType" }, alwaysRun = true)
+	@Test(priority =2, dependsOnMethods = { "addOrganisation" }, alwaysRun = true)
 	public void updateStatus() throws Exception {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.SupportTypeSubModule()));
-		objects.SupportTypeSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.OrganisationSubModule()));
+		objects.OrganisationSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("SupportTypeName"));
+		objects.searchField().sendKeys(prop.getProperty("OrganisationName"));
 		String statusText = objects.statusBtn().getText();
 		Thread.sleep(2000);
 		objects.statusBtn().click();
@@ -105,36 +105,36 @@ public class SettingsFunctions_SupportType extends BaseClass {
 		
 		
 	}
-	@Test(priority =3, dependsOnMethods = { "addSupportType" }, alwaysRun = true)
-	public void editSupportType() throws Exception {
+	@Test(priority =3, dependsOnMethods = { "addOrganisation" }, alwaysRun = true)
+	public void editOrganisation() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.SupportTypeSubModule()));
-		objects.SupportTypeSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.OrganisationSubModule()));
+		objects.OrganisationSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("SupportTypeName"));
+		objects.searchField().sendKeys(prop.getProperty("OrganisationName"));
 		Thread.sleep(2000);
 		objects.editBtn().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterSupportTypeNameField()));
-		objects.EnterSupportTypeNameField().clear();
-		objects.EnterSupportTypeNameField().sendKeys(prop.getProperty("SupportTypeNameEdited"));
-		objects.EnterSupportTypeDescField().clear();
-		objects.EnterSupportTypeDescField().sendKeys(prop.getProperty("SupportTypeDescEdited"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterOrganisationNameField()));
+		objects.EnterOrganisationNameField().clear();
+		objects.EnterOrganisationNameField().sendKeys(prop.getProperty("OrganisationNameEdited"));
+		objects.EnterOrganisationDescField().clear();
+		objects.EnterOrganisationDescField().sendKeys(prop.getProperty("OrganisationDescEdited"));
 		//update
 		objects.SaveBtn().click();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		String editedSupportTypeName = objects.entrySearched().getText();
-		String editedSupportTypeDesc = objects.entrydescSearched().getText();
+		String editedOrganisationName = objects.entrySearched().getText();
+		String editedOrganisationDesc = objects.entrydescSearched().getText();
 		
-		if (toastMessage.contentEquals("Support type updated successfully.")) {
-			Assert.assertEquals(toastMessage, "Support type updated successfully.");
+		if (toastMessage.contentEquals("Organisation updated successfully.")) {
+			Assert.assertEquals(toastMessage, "Organisation updated successfully.");
 			System.out.println(
-					"Verify update SupportType details  executed & passed successfully!!!  "
+					"Verify update Organisation details  executed & passed successfully!!!  "
 							+ toastMessage);
 
 		} else {
@@ -144,22 +144,22 @@ public class SettingsFunctions_SupportType extends BaseClass {
 		
 		objects.toastCloseBtn().click();
 		
-		if (editedSupportTypeName.contentEquals(prop.getProperty("SupportTypeNameEdited"))) {
-			Assert.assertEquals(editedSupportTypeName, prop.getProperty("SupportTypeNameEdited"));
+		if (editedOrganisationName.contentEquals(prop.getProperty("OrganisationNameEdited"))) {
+			Assert.assertEquals(editedOrganisationName, prop.getProperty("OrganisationNameEdited"));
 			System.out.println(
-					"Verify edit SupportType name  executed & passed successfully!!!   Updated SupportType name is "
-							+ editedSupportTypeName);
+					"Verify edit Organisation name  executed & passed successfully!!!   Updated Organisation name is "
+							+ editedOrganisationName);
 
 		} else {
 			Assert.fail();
 			System.out.println("Test failure observed");
 		}
 		
-		if (editedSupportTypeDesc.contentEquals(prop.getProperty("SupportTypeDescEdited"))) {
-			Assert.assertEquals(editedSupportTypeDesc, prop.getProperty("SupportTypeDescEdited"));
+		if (editedOrganisationDesc.contentEquals(prop.getProperty("OrganisationDescEdited"))) {
+			Assert.assertEquals(editedOrganisationDesc, prop.getProperty("OrganisationDescEdited"));
 			System.out.println(
-					"Verify edit SupportType description  executed & passed successfully!!!   Updated SupportType description is "
-							+ editedSupportTypeDesc);
+					"Verify edit Organisation description  executed & passed successfully!!!   Updated Organisation description is "
+							+ editedOrganisationDesc);
 
 		} else {
 			Assert.fail();
@@ -167,16 +167,16 @@ public class SettingsFunctions_SupportType extends BaseClass {
 		}
 		
 	}
-	@Test(priority =4, dependsOnMethods = { "editSupportType" }, alwaysRun = true)
-	public void deleteSupportType() throws Exception {
+	@Test(priority =4, dependsOnMethods = { "editOrganisation" }, alwaysRun = true)
+	public void deleteOrganisation() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.SupportTypeSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.OrganisationSubModule()));
+		objects.OrganisationSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
-		objects.searchField().sendKeys(prop.getProperty("SupportTypeNameEdited"));
+		objects.searchField().sendKeys(prop.getProperty("OrganisationNameEdited"));
 		Thread.sleep(2000);
 		objects.deleteBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.cnfrmYesBtn()));
@@ -186,10 +186,10 @@ public class SettingsFunctions_SupportType extends BaseClass {
 		String toastDeleteMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
 		System.out.println(toastDeleteMessage);
-		if (toastDeleteMessage.contentEquals("Support type deleted successfully.")) {
-			Assert.assertEquals(toastDeleteMessage, "Support type deleted successfully.");
+		if (toastDeleteMessage.contentEquals("Organisation deleted successfully.")) {
+			Assert.assertEquals(toastDeleteMessage, "Organisation deleted successfully.");
 			System.out.println(
-					"Verify delete SupportType details  executed & passed successfully!!!  "
+					"Verify delete Organisation details  executed & passed successfully!!!  "
 							+ toastDeleteMessage);
 
 		} else {

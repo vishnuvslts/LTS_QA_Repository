@@ -1,6 +1,7 @@
 package TestFunctions;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,66 +9,74 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_CourseOfStudy extends BaseClass {
+public class SettingsFunctions_Manage_Role extends BaseClass {
 	
 	public static WebDriverWait wait;
 	@Test(priority =1)
-	public void addCourseOfStudy() throws InterruptedException {
+	public void addRole() throws InterruptedException {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		objects.HomeBtn().click();
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.CourseSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
+		objects.RoleSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
 		objects.AddNew().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterCourseNameField()));
-		objects.EnterCourseNameField().sendKeys(prop.getProperty("CourseName"));
-		objects.EnterCourseDescField().sendKeys(prop.getProperty("CourseDesc"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterRoleNameField()));
+		objects.EnterRoleNameField().sendKeys(prop.getProperty("RoleName"));
+		objects.EnterRoleDescField().sendKeys(prop.getProperty("RoleDesc"));
+		Select select = new Select(objects.SelectSupportType()); 
+		select.selectByValue("1");
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
-		if (toastsuccessMessage.contentEquals("Course added successfully")) {
-			Assert.assertEquals(toastsuccessMessage, "Course added successfully");
-			System.out.println("Verify create course of study executed and passed successfully!!!   "+toastsuccessMessage);
+		objects.toastCloseBtn().click();
+		if (toastsuccessMessage.contentEquals("Role created successfully.")) {
+			Assert.assertEquals(toastsuccessMessage, "Role created successfully.");
+			System.out.println("Verify create Role executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 
 		else {
-			Assert.fail();
 			System.out.println("Verification failed");
+			Exception e = new Exception();
+			e.printStackTrace();
+			Assert.fail();
+			
 		}
 		
 		Thread.sleep(3000);
-		objects.toastCloseBtn().click();
-		objects.searchField().sendKeys(prop.getProperty("CourseName"));
+		objects.searchField().sendKeys(prop.getProperty("RoleName"));
 		Thread.sleep(3000);
 		String addedentry = objects.entrySearched().getText();
-		if (addedentry.contentEquals(prop.getProperty("CourseName"))) {
-			Assert.assertEquals(addedentry, prop.getProperty("CourseName"));
+		if (addedentry.contentEquals(prop.getProperty("RoleName"))) {
+			Assert.assertEquals(addedentry, prop.getProperty("RoleName"));
 			System.out.println(
-					"Verify course list executed & passed successfully!!!   New course of study added is "
+					"Verify Role list executed & passed successfully!!!   New Role added is "
 							+ addedentry);
 
 		} else {
+			Exception e = new Exception();
+			e.printStackTrace();
 			Assert.fail();
 			System.out.println("Test failure observed");
 		}
 		
 		
 	}
-	@Test(priority =2, dependsOnMethods = { "addCourseOfStudy" }, alwaysRun = true)
+	
+	@Test(priority =2, dependsOnMethods = { "addRole" }, alwaysRun = true)
 	public void updateStatus() throws Exception {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.CourseSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
+		objects.RoleSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("CourseName"));
+		objects.searchField().sendKeys(prop.getProperty("RoleName"));
 		String statusText = objects.statusBtn().getText();
 		Thread.sleep(2000);
 		objects.statusBtn().click();
@@ -99,36 +108,36 @@ public class SettingsFunctions_CourseOfStudy extends BaseClass {
 		
 		
 	}
-	@Test(priority =3, dependsOnMethods = { "addCourseOfStudy" }, alwaysRun = true)
+	@Test(priority =3, dependsOnMethods = { "addRole" }, alwaysRun = true)
 	public void editCourse() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.CourseSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
+		objects.RoleSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("CourseName"));
+		objects.searchField().sendKeys(prop.getProperty("RoleName"));
 		Thread.sleep(2000);
 		objects.editBtn().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterCourseNameField()));
-		objects.EnterCourseNameField().clear();
-		objects.EnterCourseNameField().sendKeys(prop.getProperty("CourseNameEdited"));
-		objects.EnterCourseDescField().clear();
-		objects.EnterCourseDescField().sendKeys(prop.getProperty("CourseDescEdited"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterRoleNameField()));
+		objects.EnterRoleNameField().clear();
+		objects.EnterRoleNameField().sendKeys(prop.getProperty("RoleNameEdited"));
+		objects.EnterRoleDescField().clear();
+		objects.EnterRoleDescField().sendKeys(prop.getProperty("RoleDescEdited"));
 		//update
 		objects.SaveBtn().click();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		String editedCourseName = objects.entrySearched().getText();
-		String editedCourseDesc = objects.entrydescSearched().getText();
+		String editedRoleName = objects.entrySearched().getText();
+		String editedRoleDesc = objects.entrydescSearched().getText();
 		
-		if (toastMessage.contentEquals("Course updated successfully")) {
-			Assert.assertEquals(toastMessage, "Course updated successfully");
+		if (toastMessage.contentEquals("Role updated successfully.")) {
+			Assert.assertEquals(toastMessage, "Role updated successfully.");
 			System.out.println(
-					"Verify update course details  executed & passed successfully!!!  "
+					"Verify update Role details  executed & passed successfully!!!  "
 							+ toastMessage);
 
 		} else {
@@ -136,23 +145,24 @@ public class SettingsFunctions_CourseOfStudy extends BaseClass {
 			System.out.println("Test failure observed");
 		}
 		
+		objects.toastCloseBtn().click();
 		
-		if (editedCourseName.contentEquals(prop.getProperty("CourseNameEdited"))) {
-			Assert.assertEquals(editedCourseName, prop.getProperty("CourseNameEdited"));
+		if (editedRoleName.contentEquals(prop.getProperty("RoleNameEdited"))) {
+			Assert.assertEquals(editedRoleName, prop.getProperty("RoleNameEdited"));
 			System.out.println(
-					"Verify edit course name  executed & passed successfully!!!   Updated course of study name is "
-							+ editedCourseName);
+					"Verify edit Role name  executed & passed successfully!!!   Updated Role name is "
+							+ editedRoleName);
 
 		} else {
 			Assert.fail();
 			System.out.println("Test failure observed");
 		}
 		
-		if (editedCourseDesc.contentEquals(prop.getProperty("CourseDescEdited"))) {
-			Assert.assertEquals(editedCourseDesc, prop.getProperty("CourseDescEdited"));
+		if (editedRoleDesc.contentEquals(prop.getProperty("RoleDescEdited"))) {
+			Assert.assertEquals(editedRoleDesc, prop.getProperty("RoleDescEdited"));
 			System.out.println(
-					"Verify edit course description  executed & passed successfully!!!   Updated course of study description is "
-							+ editedCourseDesc);
+					"Verify edit Role description  executed & passed successfully!!!   Updated Role description is "
+							+ editedRoleDesc);
 
 		} else {
 			Assert.fail();
@@ -167,9 +177,9 @@ public class SettingsFunctions_CourseOfStudy extends BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.CourseSubModule().click();
+		objects.RoleSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
-		objects.searchField().sendKeys(prop.getProperty("CourseNameEdited"));
+		objects.searchField().sendKeys(prop.getProperty("RoleNameEdited"));
 		Thread.sleep(2000);
 		objects.deleteBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.cnfrmYesBtn()));
@@ -179,10 +189,10 @@ public class SettingsFunctions_CourseOfStudy extends BaseClass {
 		String toastDeleteMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
 		System.out.println(toastDeleteMessage);
-		if (toastDeleteMessage.contentEquals("Course deleted successfully.")) {
-			Assert.assertEquals(toastDeleteMessage, "Course deleted successfully.");
+		if (toastDeleteMessage.contentEquals("Role deleted successfully.")) {
+			Assert.assertEquals(toastDeleteMessage, "Role deleted successfully.");
 			System.out.println(
-					"Verify delete course details  executed & passed successfully!!!  "
+					"Verify delete Role details  executed & passed successfully!!!  "
 							+ toastDeleteMessage);
 
 		} else {
