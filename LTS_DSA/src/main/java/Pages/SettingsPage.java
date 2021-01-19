@@ -13,7 +13,7 @@ public class SettingsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Select user type for login
+	// Select module
 	@FindBy(xpath = "//a[@data-toggle='collapse']")
 	WebElement SettingsModule;
 	// Common items
