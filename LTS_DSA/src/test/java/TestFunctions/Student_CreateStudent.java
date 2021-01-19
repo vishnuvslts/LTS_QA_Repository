@@ -20,6 +20,12 @@ public class Student_CreateStudent extends BaseClass  {
 		wait.until(ExpectedConditions.elementToBeClickable(objects.student_firstname()));
 		//Enter student details
 		objects.student_firstname().sendKeys(prop.getProperty("Student_Firstname"));
+		objects.student_lastname().sendKeys(prop.getProperty("Student_Student_Lastname"));
+		objects.student_phone().sendKeys(prop.getProperty("Student_Phone"));
+		objects.student_mobile().sendKeys(prop.getProperty("Student_Mobile"));
+		objects.student_SFEEmail().sendKeys(prop.getProperty("Student_Email"));
+		objects.student_address().sendKeys(prop.getProperty("Student_Address"));
+		objects.student_dob().sendKeys(prop.getProperty("Student_dob"));
 	}
 
 }

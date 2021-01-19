@@ -16,8 +16,8 @@ public class StudentPage {
 	// Common
 	@FindBy(xpath = "//a[@class='navbar-brand']")
 	WebElement HomeBtn;
-	
-	//Page details
+
+	// Page details
 	@FindBy(xpath = "//a[@id='admin_students']")
 	WebElement StudentsModule;
 	@FindBy(xpath = "//span[@class='add-new']")
@@ -35,14 +35,17 @@ public class StudentPage {
 	WebElement student_mobile;
 	@FindBy(xpath = "//input[@placeholder='Enter sfe registered email']")
 	WebElement student_SFEEmail;
+	@FindBy(xpath = "//textarea[@id='add_student_address']")
+	WebElement student_address;
+	@FindBy(xpath = "//input[@id='add_student_dateofbirth']")
+	WebElement student_dob;
 
-	
-	//common
+	// common
 	public WebElement HomeBtn() {
 		return HomeBtn;
 	}
-	
-	//page details
+
+	// page details
 	public WebElement StudentsModule() {
 		return StudentsModule;
 	}
@@ -74,5 +77,13 @@ public class StudentPage {
 
 	public WebElement student_SFEEmail() {
 		return student_SFEEmail;
+	}
+
+	public WebElement student_address() {
+		return student_address;
+	}
+	
+	public WebElement student_dob() {
+		return student_dob;
 	}
 }
