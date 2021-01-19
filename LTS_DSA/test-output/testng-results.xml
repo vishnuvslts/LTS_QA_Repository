@@ -1,125 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="30" passed="24">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="114492" started-at="2021-01-18T16:45:38 IST" finished-at="2021-01-18T16:47:32 IST">
+  <suite name="Suite" duration-ms="963" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="114492" started-at="2021-01-18T16:45:38 IST" finished-at="2021-01-18T16:47:32 IST">
-      <class name="TestFunctions.AdminProfileFunctions">
-        <test-method status="PASS" signature="verifyProfileDetails()[pri:1, instance:TestFunctions.AdminProfileFunctions@74294adb]" name="verifyProfileDetails" duration-ms="347" started-at="2021-01-18T16:45:40 IST" finished-at="2021-01-18T16:45:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProfileDetails -->
-        <test-method status="PASS" signature="editProfile()[pri:2, instance:TestFunctions.AdminProfileFunctions@74294adb]" name="editProfile" duration-ms="3851" started-at="2021-01-18T16:45:40 IST" finished-at="2021-01-18T16:45:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editProfile -->
-      </class> <!-- TestFunctions.AdminProfileFunctions -->
-      <class name="TestFunctions.LoginFunctions">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.LoginFunctions@58a90037]" name="initDriver" is-config="true" duration-ms="7492" started-at="2021-01-18T16:45:30 IST" finished-at="2021-01-18T16:45:38 IST">
+    <test name="Test" duration-ms="963" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
+      <class name="TestFunctions.Login">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login@6acdbdf5]" name="initDriver" is-config="true" duration-ms="7539" started-at="2021-01-19T11:16:32 IST" finished-at="2021-01-19T11:16:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyNegativeLogin()[pri:1, instance:TestFunctions.LoginFunctions@58a90037]" name="verifyNegativeLogin" duration-ms="1264" started-at="2021-01-18T16:45:38 IST" finished-at="2021-01-18T16:45:39 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNegativeLogin -->
-        <test-method status="PASS" signature="verifyLogin()[pri:2, instance:TestFunctions.LoginFunctions@58a90037]" name="verifyLogin" duration-ms="746" started-at="2021-01-18T16:45:39 IST" finished-at="2021-01-18T16:45:40 IST">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@6acdbdf5]" name="verifyLogin" duration-ms="941" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.LoginFunctions -->
-      <class name="TestFunctions.SettingsFunctions_Organisation">
-        <test-method status="PASS" signature="addOrganisation()[pri:1, instance:TestFunctions.SettingsFunctions_Organisation@130f889]" name="addOrganisation" duration-ms="7631" started-at="2021-01-18T16:46:05 IST" finished-at="2021-01-18T16:46:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addOrganisation -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Organisation@130f889]" name="updateStatus" duration-ms="4401" started-at="2021-01-18T16:46:13 IST" depends-on-methods="TestFunctions.SettingsFunctions_Organisation.addOrganisation" finished-at="2021-01-18T16:46:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editOrganisation()[pri:3, instance:TestFunctions.SettingsFunctions_Organisation@130f889]" name="editOrganisation" duration-ms="5327" started-at="2021-01-18T16:46:17 IST" depends-on-methods="TestFunctions.SettingsFunctions_Organisation.addOrganisation" finished-at="2021-01-18T16:46:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editOrganisation -->
-        <test-method status="PASS" signature="deleteOrganisation()[pri:4, instance:TestFunctions.SettingsFunctions_Organisation@130f889]" name="deleteOrganisation" duration-ms="4464" started-at="2021-01-18T16:46:22 IST" depends-on-methods="TestFunctions.SettingsFunctions_Organisation.editOrganisation" finished-at="2021-01-18T16:46:27 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteOrganisation -->
-      </class> <!-- TestFunctions.SettingsFunctions_Organisation -->
-      <class name="TestFunctions.SettingsFunctions_CourseOfStudy">
-        <test-method status="PASS" signature="addCourseOfStudy()[pri:1, instance:TestFunctions.SettingsFunctions_CourseOfStudy@70a9f84e]" name="addCourseOfStudy" duration-ms="6947" started-at="2021-01-18T16:45:44 IST" finished-at="2021-01-18T16:45:51 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCourseOfStudy -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_CourseOfStudy@70a9f84e]" name="updateStatus" duration-ms="4453" started-at="2021-01-18T16:45:51 IST" depends-on-methods="TestFunctions.SettingsFunctions_CourseOfStudy.addCourseOfStudy" finished-at="2021-01-18T16:45:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editCourse()[pri:3, instance:TestFunctions.SettingsFunctions_CourseOfStudy@70a9f84e]" name="editCourse" duration-ms="5194" started-at="2021-01-18T16:45:55 IST" depends-on-methods="TestFunctions.SettingsFunctions_CourseOfStudy.addCourseOfStudy" finished-at="2021-01-18T16:46:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editCourse -->
-        <test-method status="PASS" signature="deleteCourse()[pri:4, instance:TestFunctions.SettingsFunctions_CourseOfStudy@70a9f84e]" name="deleteCourse" duration-ms="4420" started-at="2021-01-18T16:46:00 IST" depends-on-methods="TestFunctions.SettingsFunctions_CourseOfStudy.editCourse" finished-at="2021-01-18T16:46:05 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCourse -->
-      </class> <!-- TestFunctions.SettingsFunctions_CourseOfStudy -->
-      <class name="TestFunctions.SettingsFunctions_Institution">
-        <test-method status="PASS" signature="addInstitution()[pri:1, instance:TestFunctions.SettingsFunctions_Institution@1188e820]" name="addInstitution" duration-ms="7624" started-at="2021-01-18T16:46:27 IST" finished-at="2021-01-18T16:46:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addInstitution -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Institution@1188e820]" name="updateStatus" duration-ms="4409" started-at="2021-01-18T16:46:34 IST" depends-on-methods="TestFunctions.SettingsFunctions_Institution.addInstitution" finished-at="2021-01-18T16:46:39 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editCourse()[pri:3, instance:TestFunctions.SettingsFunctions_Institution@1188e820]" name="editCourse" duration-ms="5335" started-at="2021-01-18T16:46:39 IST" depends-on-methods="TestFunctions.SettingsFunctions_Institution.addInstitution" finished-at="2021-01-18T16:46:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editCourse -->
-        <test-method status="PASS" signature="deleteCourse()[pri:4, instance:TestFunctions.SettingsFunctions_Institution@1188e820]" name="deleteCourse" duration-ms="4428" started-at="2021-01-18T16:46:44 IST" depends-on-methods="TestFunctions.SettingsFunctions_Institution.editCourse" finished-at="2021-01-18T16:46:49 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCourse -->
-      </class> <!-- TestFunctions.SettingsFunctions_Institution -->
-      <class name="TestFunctions.SettingsFunctions_Role">
-        <test-method status="PASS" signature="addRole()[pri:1, instance:TestFunctions.SettingsFunctions_Role@101df177]" name="addRole" duration-ms="7595" started-at="2021-01-18T16:47:10 IST" finished-at="2021-01-18T16:47:18 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addRole -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Role@101df177]" name="updateStatus" duration-ms="4471" started-at="2021-01-18T16:47:18 IST" depends-on-methods="TestFunctions.SettingsFunctions_Role.addRole" finished-at="2021-01-18T16:47:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editCourse()[pri:3, instance:TestFunctions.SettingsFunctions_Role@101df177]" name="editCourse" duration-ms="5314" started-at="2021-01-18T16:47:22 IST" depends-on-methods="TestFunctions.SettingsFunctions_Role.addRole" finished-at="2021-01-18T16:47:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editCourse -->
-        <test-method status="PASS" signature="deleteCourse()[pri:4, instance:TestFunctions.SettingsFunctions_Role@101df177]" name="deleteCourse" duration-ms="4434" started-at="2021-01-18T16:47:28 IST" depends-on-methods="TestFunctions.SettingsFunctions_Role.editCourse" finished-at="2021-01-18T16:47:32 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCourse -->
-      </class> <!-- TestFunctions.SettingsFunctions_Role -->
-      <class name="TestFunctions.SettingsFunctions_SupportType">
-        <test-method status="PASS" signature="addSupportType()[pri:1, instance:TestFunctions.SettingsFunctions_SupportType@2f490758]" name="addSupportType" duration-ms="7548" started-at="2021-01-18T16:46:49 IST" finished-at="2021-01-18T16:46:56 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addSupportType -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_SupportType@2f490758]" name="updateStatus" duration-ms="4436" started-at="2021-01-18T16:46:56 IST" depends-on-methods="TestFunctions.SettingsFunctions_SupportType.addSupportType" finished-at="2021-01-18T16:47:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editSupportType()[pri:3, instance:TestFunctions.SettingsFunctions_SupportType@2f490758]" name="editSupportType" duration-ms="5343" started-at="2021-01-18T16:47:01 IST" depends-on-methods="TestFunctions.SettingsFunctions_SupportType.addSupportType" finished-at="2021-01-18T16:47:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editSupportType -->
-        <test-method status="PASS" signature="deleteSupportType()[pri:4, instance:TestFunctions.SettingsFunctions_SupportType@2f490758]" name="deleteSupportType" duration-ms="4443" started-at="2021-01-18T16:47:06 IST" depends-on-methods="TestFunctions.SettingsFunctions_SupportType.editSupportType" finished-at="2021-01-18T16:47:10 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSupportType -->
-      </class> <!-- TestFunctions.SettingsFunctions_SupportType -->
+      </class> <!-- TestFunctions.Login -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
