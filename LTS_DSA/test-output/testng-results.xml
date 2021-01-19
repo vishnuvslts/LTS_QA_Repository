@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="963" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
+  <suite name="Suite" duration-ms="4256" started-at="2021-01-19T12:07:54 IST" finished-at="2021-01-19T12:07:58 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="963" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
+    <test name="Test" duration-ms="4256" started-at="2021-01-19T12:07:54 IST" finished-at="2021-01-19T12:07:58 IST">
       <class name="TestFunctions.Login">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login@6acdbdf5]" name="initDriver" is-config="true" duration-ms="7539" started-at="2021-01-19T11:16:32 IST" finished-at="2021-01-19T11:16:39 IST">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login@17579e0f]" name="initDriver" is-config="true" duration-ms="7613" started-at="2021-01-19T12:07:46 IST" finished-at="2021-01-19T12:07:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@6acdbdf5]" name="verifyLogin" duration-ms="941" started-at="2021-01-19T11:16:39 IST" finished-at="2021-01-19T11:16:40 IST">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@17579e0f]" name="verifyLogin" duration-ms="876" started-at="2021-01-19T12:07:54 IST" finished-at="2021-01-19T12:07:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
       </class> <!-- TestFunctions.Login -->
+      <class name="TestFunctions.Logout">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@4d41cee]" name="Logout" duration-ms="3352" started-at="2021-01-19T12:07:54 IST" finished-at="2021-01-19T12:07:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestFunctions.Logout@4d41cee]" name="tearDown" is-config="true" duration-ms="593" started-at="2021-01-19T12:07:58 IST" finished-at="2021-01-19T12:07:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestFunctions.Logout -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
