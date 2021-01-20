@@ -5,7 +5,8 @@
   <test thread-count="5" name="Test">
     <classes>
     <class name="TestFunctions.Login"/>
-    <class name="TestFunctions.Logout"/>
+    <class name="TestFunctions.Student_DeleteStudent"/>
+    
 
       
     </classes>

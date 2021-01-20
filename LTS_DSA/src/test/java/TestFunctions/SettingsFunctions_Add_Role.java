@@ -28,7 +28,7 @@ public class SettingsFunctions_Add_Role extends BaseClass {
 		objects.EnterRoleNameField().sendKeys(prop.getProperty("RoleName"));
 		objects.EnterRoleDescField().sendKeys(prop.getProperty("RoleDesc"));
 		Select select = new Select(objects.SelectSupportType()); 
-		select.selectByValue("1");
+		select.selectByVisibleText(prop.getProperty("SupportTypeName"));
 		objects.SaveBtn().click();
 		
 	}
