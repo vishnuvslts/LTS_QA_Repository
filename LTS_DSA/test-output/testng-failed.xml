@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestFunctions.Student_CreateStudent">
+      <class name="TestFunctions.Student_DeleteStudent">
         <methods>
-          <include name="createStudentProfile"/>
+          <include name="deleteStudentProfile"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- TestFunctions.Student_CreateStudent -->
+      </class> <!-- TestFunctions.Student_DeleteStudent -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

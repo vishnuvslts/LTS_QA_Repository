@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5610" started-at="2021-01-20T17:12:10 IST" finished-at="2021-01-20T17:12:16 IST">
+  <suite name="Suite" duration-ms="401" started-at="2021-01-21T15:12:21 IST" finished-at="2021-01-21T15:12:21 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5610" started-at="2021-01-20T17:12:10 IST" finished-at="2021-01-20T17:12:16 IST">
-      <class name="TestFunctions.Login">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login@4b1c1ea0]" name="initDriver" is-config="true" duration-ms="7605" started-at="2021-01-20T17:12:03 IST" finished-at="2021-01-20T17:12:10 IST">
+    <test name="Test" duration-ms="401" started-at="2021-01-21T15:12:21 IST" finished-at="2021-01-21T15:12:21 IST">
+      <class name="TestFunctions.Login_Student">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Student@33f88ab]" name="initDriver" is-config="true" duration-ms="7550" started-at="2021-01-21T15:12:13 IST" finished-at="2021-01-21T15:12:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@4b1c1ea0]" name="verifyLogin" duration-ms="1008" started-at="2021-01-20T17:12:10 IST" finished-at="2021-01-20T17:12:11 IST">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Student@33f88ab]" name="verifyLogin" duration-ms="379" started-at="2021-01-21T15:12:21 IST" finished-at="2021-01-21T15:12:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.Login -->
-      <class name="TestFunctions.Student_DeleteStudent">
-        <test-method status="PASS" signature="deleteStudentProfile()[pri:0, instance:TestFunctions.Student_DeleteStudent@17579e0f]" name="deleteStudentProfile" duration-ms="4577" started-at="2021-01-20T17:12:11 IST" finished-at="2021-01-20T17:12:16 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteStudentProfile -->
-      </class> <!-- TestFunctions.Student_DeleteStudent -->
+      </class> <!-- TestFunctions.Login_Student -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
