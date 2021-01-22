@@ -1,6 +1,7 @@
 package TestFunctions;
 
 import java.util.Date;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,6 +22,13 @@ public class Login_Student extends BaseClass {
 	@Test
 	public void verifyLogin() {
 		LoginPage objects = new LoginPage(driver);
+		Random rn = new Random();
+
+		for(int i =0; i < 1; i++)
+		{
+		    int answer = rn.nextInt(27) + 1;
+		    System.out.println(answer);
+		}
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStudent()));
