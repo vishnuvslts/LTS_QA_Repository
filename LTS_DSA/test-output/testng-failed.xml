@@ -3,12 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestFunctions.Student_DeleteStudent">
+      <class name="TestFunctions.Login_Staff_FirstTime">
         <methods>
-          <include name="deleteStudentProfile"/>
+          <include name="firstTimeLogin"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- TestFunctions.Student_DeleteStudent -->
+      </class> <!-- TestFunctions.Login_Staff_FirstTime -->
+      <class name="TestFunctions.Staff_DeleteStaff">
+        <methods>
+          <include name="createStaffProfile"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- TestFunctions.Staff_DeleteStaff -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
