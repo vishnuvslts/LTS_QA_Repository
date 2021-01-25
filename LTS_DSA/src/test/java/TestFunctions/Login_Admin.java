@@ -25,7 +25,7 @@ public class Login_Admin extends BaseClass {
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeAdmin()));
-		Read_OTP.OutlookMailReader("Inbox", "DSA OTP", "Your OTP is ", 6);
+		//Read_OTP.OutlookMailReader("Inbox", "DSA OTP", "Your OTP is ", 6);
 		// Select the usertype for login
 		objects.SelectUserTypeAdmin().click();
 		objects.EmailField().sendKeys(prop.getProperty("AdminEmail"));

@@ -31,11 +31,6 @@ public class Logout extends BaseClass {
 		}
 		
 	}
-	@AfterSuite
-	public void tearDown() {
-		driver.close();
-		driver.quit();
-	
-	}
+
 
 }

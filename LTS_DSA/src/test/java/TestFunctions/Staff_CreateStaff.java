@@ -43,7 +43,6 @@ public class Staff_CreateStaff extends BaseClass {
 		// Select role
 		driver.findElement(By.xpath("//input[@value='" + prop.getProperty("RoleName") + "']")).click();
 		objects.SaveBtn().click();
-		
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
 		if (toastsuccessMessage.contentEquals("Staff profile created successfully")) {

@@ -27,6 +27,22 @@ public class SettingsFunctions_Add_CourseOfStudy extends BaseClass {
 		objects.EnterCourseNameField().sendKeys(prop.getProperty("CourseName"));
 		objects.EnterCourseDescField().sendKeys(prop.getProperty("CourseDesc"));
 		objects.SaveBtn().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
+		String toastsuccessMessage = objects.toastMsg().getText();
+		if (toastsuccessMessage.contentEquals("Course added successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Course added successfully");
+			System.out.println("Verify create course of study executed and passed successfully!!!   "+toastsuccessMessage);
+		}
+		
+		else if (toastsuccessMessage.contentEquals("Course already exists")) {
+			Assert.assertEquals(toastsuccessMessage, "Course already exists");
+			
+		}
+
+		else {
+			Assert.fail();
+			System.out.println("Verification failed");
+		}
 		
 	}
 }

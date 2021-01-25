@@ -17,7 +17,7 @@ WebDriver driver ;
 	//Select user type for login
 	@FindBy(xpath= "//div[text()='Admin']")WebElement SelectUserTypeAdmin;
 	@FindBy(xpath= "//div[text()='Student']")WebElement SelectUserTypeStudent;
-	@FindBy(xpath= "//div[text()='Staff']")WebElement SelectUserTypeStaff;
+	@FindBy(xpath= "//div[text()='Support Staff']")WebElement SelectUserTypeStaff;
 	
 	//Email field
 	@FindBy(xpath= "(//*[@placeholder='Email'])[1]")WebElement EmailField;
@@ -40,6 +40,12 @@ WebDriver driver ;
 	@FindBy(xpath= "//a[@href='http://202.88.237.137/dsa/index.html#/Admin/Profile/61']")WebElement ProfileModule;
 	@FindBy(xpath= "//p[@class='stu-subtext']")WebElement UserEmail;
 	@FindBy(xpath= "//p[@class='student-name']")WebElement UserName;
+	
+	//Reset password
+	@FindBy(xpath= "//input[@id='resetpswd_newPassword']")WebElement set_NewPwd;
+	@FindBy(xpath= "//input[@id='resetpswd_confirm_pswd']")WebElement set_CnfrmPwd;
+	@FindBy(xpath= "//button[@id='resetpswd_submit']")WebElement subBtn;
+	@FindBy(xpath= "//button[@id='signdoc_accept']")WebElement agreeDocs;
 	
 	public WebElement SelectUserTypeAdmin()
 	{
@@ -99,6 +105,25 @@ WebDriver driver ;
 	{
 		return UserName;
 	}
-
+	
+	//Reset password
+	public WebElement set_NewPwd()
+	{
+		return set_NewPwd;
+	}
+	public WebElement set_CnfrmPwd()
+	{
+		return set_CnfrmPwd;
+	}
+	
+	public WebElement subBtn()
+	{
+		return subBtn;
+	}
+	
+	public WebElement agreeDocs()
+	{
+		return agreeDocs;
+	}
 
 }

@@ -13,6 +13,7 @@ import javax.mail.Session;
 import javax.mail.Store;
 
 public class Read_OTP {
+	public static String searchText=null ;
 	
 	public static String OutlookMailReader(String mailFolderName,String emailSubjectContent, String emailContent, int lengthOfOTP) {
 
@@ -20,9 +21,9 @@ public class Read_OTP {
 		//mailFolderName(Eg- "INBOX"), emailSubjectContent(Eg- Mail for OTP),emailContent(Eg- OTP is 111111), OTP length(Eg- 6)
 		            String hostName = "smtp.gmail.com";//change it according to your mail
 
-		            String username = "vishnuvsprof@gmail.com";//username 
+		            String username = "vishnuvsstf@gmail.com";//username 
 
-		            String password = "Test@1234";
+		            String password = "Jeejams91@";
 
 		            int messageCount;
 
@@ -31,8 +32,7 @@ public class Read_OTP {
 		            String emailSubject;
 
 		            Message emailMessage;
-
-		            String searchText=null ;
+		            
 
 		            Properties sysProps = System.getProperties();
 
@@ -65,6 +65,7 @@ public class Read_OTP {
 		                    emailMessage = emailBox.getMessage(i);
 
 		                    emailSubject = emailMessage.getSubject();
+		                    System.out.println(emailSubject);
 
 		                    if(emailSubject.contains(emailSubjectContent))
 
@@ -85,6 +86,7 @@ public class Read_OTP {
 		                        }
 
 		                        String messageContent=emailContent;
+		                       
 
 		                        String result = buffer.toString().substring(buffer.toString().indexOf(messageContent));
 
@@ -92,13 +94,13 @@ public class Read_OTP {
 
 		                        System.out.println("Text found : "+ searchText);
 
-		                        emailMessage.setFlag(Flags.Flag.SEEN, true);
+		                        emailMessage.setFlag(Flags.Flag.DELETED, true);
 
 		                        break;
 
 		                    }
 
-		                    emailMessage.setFlag(Flags.Flag.SEEN, true);
+		                    emailMessage.setFlag(Flags.Flag.DELETED, true);
 
 		                }
 
