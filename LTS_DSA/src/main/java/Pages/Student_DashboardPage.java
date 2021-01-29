@@ -23,6 +23,7 @@ WebDriver driver ;
 	//Select user type for login
 	@FindBy(xpath= "//a[@class='nav-link dropdown-toggle user-dp-toggle']")WebElement ViewUserBtn;
 	@FindBy(xpath= "//span[text()='Logout']")WebElement LogoutBtn;
+	@FindBy(xpath= "//select[@id='student_calendar_staff']")WebElement selectStaffDrpDwn;
 	
 	//Common
 	public WebElement CalendarFrwdBtn()
@@ -47,5 +48,10 @@ WebDriver driver ;
 	public List <WebElement> DSALogo()
 	{
 		return DSALogo;
+	}
+	
+	public WebElement selectStaffDrpDwn()
+	{
+		return selectStaffDrpDwn;
 	}
 }
