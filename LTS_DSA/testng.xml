@@ -9,13 +9,11 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-    <class name="TestFunctions.LoginFunctions"/>
+    <class name="TestFunctions.Login_NegativeVerifications"/>
+    <class name="TestFunctions.Login"/>
     <class name="TestFunctions.AdminProfileFunctions"/>
-    <class name="TestFunctions.SettingsFunctions_CourseOfStudy"/>
-      <class name="TestFunctions.SettingsFunctions_Organisation"/>
-      <class name="TestFunctions.SettingsFunctions_Institution"/>   
-      <class name="TestFunctions.SettingsFunctions_SupportType"/>
-      <class name="TestFunctions.SettingsFunctions_Role"/>
+      <class name="TestFunctions.Logout"/>
+
       
     </classes>
   </test> <!-- Test -->

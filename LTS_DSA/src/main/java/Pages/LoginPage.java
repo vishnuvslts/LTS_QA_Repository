@@ -37,7 +37,7 @@ WebDriver driver ;
 	@FindBy(xpath= "//div[@class='toast-message']")WebElement ToastMessage;
 	
 	//Verify signed in user
-	@FindBy(xpath= "//a[@href='http://202.88.237.137/dsa/index.html#/Admin/Profile/61']")WebElement ProfileModule;
+	@FindBy(xpath= "//a[@id='admin_profile']")WebElement ProfileModule;
 	@FindBy(xpath= "//p[@class='stu-subtext']")WebElement UserEmail;
 	@FindBy(xpath= "//p[@class='student-name']")WebElement UserName;
 	

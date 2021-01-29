@@ -16,7 +16,7 @@ WebDriver driver ;
 	
 	//Select user type for login
 	//Verify signed in user
-	@FindBy(xpath= "//a[@href='http://202.88.237.137/dsa/index.html#/Admin/Profile/61']")WebElement ProfileModule;
+	@FindBy(xpath= "//a[@id='admin_profile']")WebElement ProfileModule;
 	//Fields
 	@FindBy(xpath= "(//p[@class='sup-des col-8'])[1]")WebElement FirstName;
 	@FindBy(xpath= "(//p[@class='sup-des col-8'])[2]")WebElement LastName;

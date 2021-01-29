@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Common.TestListener"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestFunctions.Login_Staff_FirstTime">
+      <class name="TestFunctions.Login">
         <methods>
-          <include name="firstTimeLogin"/>
+          <include name="verifyLogin"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- TestFunctions.Login_Staff_FirstTime -->
-      <class name="TestFunctions.Staff_DeleteStaff">
+      </class> <!-- TestFunctions.Login -->
+      <class name="TestFunctions.AdminProfileFunctions">
         <methods>
-          <include name="createStaffProfile"/>
           <include name="initDriver"/>
+          <include name="verifyProfileDetails"/>
         </methods>
-      </class> <!-- TestFunctions.Staff_DeleteStaff -->
+      </class> <!-- TestFunctions.AdminProfileFunctions -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
