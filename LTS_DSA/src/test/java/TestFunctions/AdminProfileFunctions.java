@@ -18,6 +18,7 @@ public class AdminProfileFunctions extends BaseClass {
 	public void verifyProfileDetails() {
 
 		AdminProfilePage objects = new AdminProfilePage(driver);
+		System.out.println();
 		wait = new WebDriverWait(driver, 10);
 		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.ProfileModule()));

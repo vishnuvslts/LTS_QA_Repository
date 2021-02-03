@@ -1,43 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="8" passed="5">
+<testng-results skipped="0" failed="0" ignored="7" total="16" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9794" started-at="2021-01-29T14:21:29 IST" finished-at="2021-01-29T14:21:39 IST">
+  <suite name="Suite" duration-ms="12104" started-at="2021-02-03T13:31:10 IST" finished-at="2021-02-03T13:31:22 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9794" started-at="2021-01-29T14:21:29 IST" finished-at="2021-01-29T14:21:39 IST">
+    <test name="Test" duration-ms="12104" started-at="2021-02-03T13:31:10 IST" finished-at="2021-02-03T13:31:22 IST">
       <class name="TestFunctions.AdminProfileFunctions">
-        <test-method status="PASS" signature="verifyProfileDetails()[pri:1, instance:TestFunctions.AdminProfileFunctions@74294adb]" name="verifyProfileDetails" duration-ms="359" started-at="2021-01-29T14:21:31 IST" finished-at="2021-01-29T14:21:31 IST">
+        <test-method status="PASS" signature="verifyProfileDetails()[pri:1, instance:TestFunctions.AdminProfileFunctions@6ee52dcd]" name="verifyProfileDetails" duration-ms="637" started-at="2021-02-03T13:31:12 IST" finished-at="2021-02-03T13:31:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProfileDetails -->
-        <test-method status="PASS" signature="editProfile()[pri:2, instance:TestFunctions.AdminProfileFunctions@74294adb]" name="editProfile" duration-ms="3818" started-at="2021-01-29T14:21:31 IST" finished-at="2021-01-29T14:21:35 IST">
+        <test-method status="PASS" signature="editProfile()[pri:2, instance:TestFunctions.AdminProfileFunctions@6ee52dcd]" name="editProfile" duration-ms="3919" started-at="2021-02-03T13:31:12 IST" finished-at="2021-02-03T13:31:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editProfile -->
       </class> <!-- TestFunctions.AdminProfileFunctions -->
-      <class name="TestFunctions.Login">
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@58a90037]" name="verifyLogin" duration-ms="728" started-at="2021-01-29T14:21:30 IST" finished-at="2021-01-29T14:21:31 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.Login -->
       <class name="TestFunctions.Login_NegativeVerifications">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_NegativeVerifications@3bd94634]" name="initDriver" is-config="true" duration-ms="5911" started-at="2021-01-29T14:21:23 IST" finished-at="2021-01-29T14:21:29 IST">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_NegativeVerifications@76f2b07d]" name="initDriver" is-config="true" duration-ms="4014" started-at="2021-02-03T13:31:06 IST" finished-at="2021-02-03T13:31:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyNegativeLogin()[pri:0, instance:TestFunctions.Login_NegativeVerifications@3bd94634]" name="verifyNegativeLogin" duration-ms="1280" started-at="2021-01-29T14:21:29 IST" finished-at="2021-01-29T14:21:30 IST">
+        <test-method status="PASS" signature="verifyNegativeLogin()[pri:0, instance:TestFunctions.Login_NegativeVerifications@76f2b07d]" name="verifyNegativeLogin" duration-ms="1269" started-at="2021-02-03T13:31:10 IST" finished-at="2021-02-03T13:31:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNegativeLogin -->
       </class> <!-- TestFunctions.Login_NegativeVerifications -->
-      <class name="TestFunctions.Logout">
-        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@70a9f84e]" name="Logout" duration-ms="3572" started-at="2021-01-29T14:21:35 IST" finished-at="2021-01-29T14:21:39 IST">
+      <class name="TestFunctions.SettingsFunctions_Add_Role">
+        <test-method status="PASS" signature="addRole()[pri:0, instance:TestFunctions.SettingsFunctions_Add_Role@1877ab81]" name="addRole" duration-ms="1344" started-at="2021-02-03T13:31:21 IST" finished-at="2021-02-03T13:31:22 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logout -->
-      </class> <!-- TestFunctions.Logout -->
+        </test-method> <!-- addRole -->
+      </class> <!-- TestFunctions.SettingsFunctions_Add_Role -->
+      <class name="TestFunctions.SettingsFunctions_Add_Organisation">
+        <test-method status="PASS" signature="addOrganisation()[pri:0, instance:TestFunctions.SettingsFunctions_Add_Organisation@57e1b0c]" name="addOrganisation" duration-ms="1217" started-at="2021-02-03T13:31:18 IST" finished-at="2021-02-03T13:31:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addOrganisation -->
+      </class> <!-- TestFunctions.SettingsFunctions_Add_Organisation -->
+      <class name="TestFunctions.SettingsFunctions_Add_Institution">
+        <test-method status="PASS" signature="addInstitution()[pri:0, instance:TestFunctions.SettingsFunctions_Add_Institution@2781e022]" name="addInstitution" duration-ms="1385" started-at="2021-02-03T13:31:17 IST" finished-at="2021-02-03T13:31:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addInstitution -->
+      </class> <!-- TestFunctions.SettingsFunctions_Add_Institution -->
+      <class name="TestFunctions.Login_Admin">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Admin@704a52ec]" name="verifyLogin" duration-ms="311" started-at="2021-02-03T13:31:11 IST" finished-at="2021-02-03T13:31:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestFunctions.Login_Admin -->
+      <class name="TestFunctions.SettingsFunctions_Add_SupportType">
+        <test-method status="PASS" signature="addSupportType()[pri:1, instance:TestFunctions.SettingsFunctions_Add_SupportType@4232c52b]" name="addSupportType" duration-ms="1222" started-at="2021-02-03T13:31:19 IST" finished-at="2021-02-03T13:31:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSupportType -->
+      </class> <!-- TestFunctions.SettingsFunctions_Add_SupportType -->
+      <class name="TestFunctions.SettingsFunctions_Add_CourseOfStudy">
+        <test-method status="PASS" signature="addCourseOfStudy()[pri:0, instance:TestFunctions.SettingsFunctions_Add_CourseOfStudy@4493d195]" name="addCourseOfStudy" duration-ms="768" started-at="2021-02-03T13:31:16 IST" finished-at="2021-02-03T13:31:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCourseOfStudy -->
+      </class> <!-- TestFunctions.SettingsFunctions_Add_CourseOfStudy -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
