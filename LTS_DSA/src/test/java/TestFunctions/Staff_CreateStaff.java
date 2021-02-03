@@ -37,9 +37,17 @@ public class Staff_CreateStaff extends BaseClass {
 		objects.staff_Organisation_Field().click();
 		Thread.sleep(3000);
 		objects.staff_Organisation_DD_Option().click();
+		Thread.sleep(3000);
+		actions.moveToElement(objects.staff_DBSField());
+		actions.perform();
+		Thread.sleep(3000);
+		objects.browse_StaffDBS().sendKeys("C:\\Users\\yca\\Documents\\DSA\\SS\\Web\\Capture.PNG");
 		actions.moveToElement(objects.SaveBtn());
 		actions.perform();
+		Thread.sleep(3000);
 
+
+		
 		// Select role
 		driver.findElement(By.xpath("//input[@value='" + prop.getProperty("RoleName") + "']")).click();
 		objects.SaveBtn().click();

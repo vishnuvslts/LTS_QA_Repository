@@ -63,6 +63,12 @@ public class StaffPage {
 	@FindBy(xpath = "//div[@id='react-select-2-option-0']")
 	WebElement staff_Organisation_DD_Option;
 	
+	@FindBy(xpath = "//input[@name='staffDBSCert']")
+	WebElement browse_StaffDBS;
+	
+	@FindBy(xpath = "//label[text()='Staff DBS Certificate']")
+	WebElement staff_DBSField;
+	
 	// common
 	public WebElement HomeBtn() {
 		return HomeBtn;
@@ -148,5 +154,13 @@ public class StaffPage {
 	
 	public WebElement staff_Organisation_DD_Option() {
 		return staff_Organisation_DD_Option;
+	}
+	
+	public WebElement browse_StaffDBS() {
+		return browse_StaffDBS;
+	}
+	
+	public WebElement staff_DBSField() {
+		return staff_DBSField;
 	}
 }

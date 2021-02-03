@@ -4,13 +4,14 @@
 
   <test thread-count="5" name="Test">
     <classes>
+    <class name="TestFunctions.Login_NegativeVerifications"/>
     <class name="TestFunctions.Login_Admin"/>
-    <class name="TestFunctions.Staff_CreateStaff"/>
-    <class name="TestFunctions.Logout"/>
-    <class name="TestFunctions.Login_Staff_FirstTime"/>
-    <class name="TestFunctions.Logout"/>
-    <class name="TestFunctions.Login_Admin"/>
-    <class name="TestFunctions.Staff_DeleteStaff"/>
+<class name="TestFunctions.AdminProfileFunctions"/>
+<class name="TestFunctions.SettingsFunctions_Add_CourseOfStudy"/>
+<class name="TestFunctions.SettingsFunctions_Add_Institution"/>
+<class name="TestFunctions.SettingsFunctions_Add_Organisation"/>
+<class name="TestFunctions.SettingsFunctions_Add_SupportType"/>
+<class name="TestFunctions.SettingsFunctions_Add_Role"/>
    
       
     </classes>

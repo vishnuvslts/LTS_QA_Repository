@@ -29,8 +29,8 @@ public class SettingsFunctions_Add_CourseOfStudy extends BaseClass {
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
-		if (toastsuccessMessage.contentEquals("Course added successfully")) {
-			Assert.assertEquals(toastsuccessMessage, "Course added successfully");
+		if (toastsuccessMessage.contentEquals("Course created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Course created successfully");
 			System.out.println("Verify create course of study executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 		
