@@ -40,13 +40,13 @@ WebDriver driver ;
 	@FindBy(xpath= "//textarea[@placeholder='Enter Address']")WebElement AddressEdit;
 	
 	//update button
-	@FindBy(xpath= "//button[@class='msg-send-btn']")WebElement ProfileUpdateBtn;
+	@FindBy(xpath= "//button[@class='msg-send-btn  modal-btn-mr disbl ml-0']")WebElement ProfileUpdateBtn;
 	
 	//Edit success message
 	@FindBy(xpath= "//div[@class='toast-message']")WebElement EditSuccessMessage;
 	
 	//Common
-		@FindBy(xpath= "//a[@class='navbar-brand']")WebElement HomeBtn;
+		@FindBy(xpath= "//img[@class='brand-logo']")WebElement HomeBtn;
 		@FindBy(xpath = "//button[@class='toast-close-button']")
 		WebElement toastCloseBtn;
 	
