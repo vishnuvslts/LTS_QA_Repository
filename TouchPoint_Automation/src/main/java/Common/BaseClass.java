@@ -29,7 +29,7 @@ public class BaseClass {
 		prop.load(fis);
 
 		// Manage windows property
-
+ 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 

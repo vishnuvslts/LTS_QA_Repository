@@ -8,17 +8,9 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="TestFunctions.Login_NegativeVerifications" />
-			<class name="TestFunctions.Login_Admin" />
-			<class name="TestFunctions.AdminProfileFunctions" />
-			<class
-				name="TestFunctions.SettingsFunctions_Manage_Institution" />
-			<class
-				name="TestFunctions.SettingsFunctions_Manage_Organisation" />
-			<class
-				name="TestFunctions.SettingsFunctions_Manage_SupportType" />
-			<class name="TestFunctions.SettingsFunctions_Manage_Role" />
+			<class name="TestFunctions.Login_Student" />
 
+<class name="TestFunctions.Student_CreateEvent" />
 
 
 

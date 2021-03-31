@@ -17,13 +17,20 @@ WebDriver driver ;
 	
 	//Common
 	@FindBy(xpath= "//span[@class='fc-icon fc-icon-chevron-right']")WebElement CalendarFrwdBtn;
-	@FindBy(xpath= "//a[@class='navbar-brand']")WebElement HomeBtn;
+	@FindBy(xpath= "//a[@id='student_dasboard']")WebElement StudentDash;
 	@FindBy(xpath= "//img[@alt='dsa-logo']")List <WebElement> DSALogo;
 	
 	//Select user type for login
 	@FindBy(xpath= "//a[@class='nav-link dropdown-toggle user-dp-toggle']")WebElement ViewUserBtn;
 	@FindBy(xpath= "//span[text()='Logout']")WebElement LogoutBtn;
 	@FindBy(xpath= "//select[@id='student_calendar_staff']")WebElement selectStaffDrpDwn;
+	
+	//Select staff dropdown
+	@FindBy(xpath= "//select[@id='student_calendar_staff']")WebElement SelectStaffDropDown;
+	
+	
+	
+	
 	
 	//Common
 	public WebElement CalendarFrwdBtn()
@@ -40,9 +47,9 @@ WebDriver driver ;
 		return LogoutBtn;
 	}
 	
-	public WebElement HomeBtn()
+	public WebElement StudentDash()
 	{
-		return HomeBtn;
+		return StudentDash;
 	}
 	
 	public List <WebElement> DSALogo()

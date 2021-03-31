@@ -1,6 +1,7 @@
 package Common;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
@@ -68,6 +69,13 @@ public class StringHelper {
 		return intNumber;
 	}
 	
+
+		public static String getCurrentSystemDate() {  
+		    Date date = new Date();  
+		    SimpleDateFormat formatter = new SimpleDateFormat("dd - MM - yyyy");  
+		    String strDate= formatter.format(date);  
+		   return strDate; 
+		}
 	
 	}
 	

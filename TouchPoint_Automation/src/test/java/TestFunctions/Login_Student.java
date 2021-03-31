@@ -22,13 +22,7 @@ public class Login_Student extends BaseClass {
 	@Test
 	public void verifyLogin() {
 		LoginPage objects = new LoginPage(driver);
-		Random rn = new Random();
 
-		for(int i =0; i < 1; i++)
-		{
-		    int answer = rn.nextInt(27) + 1;
-		    System.out.println(answer);
-		}
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStudent()));
@@ -36,7 +30,7 @@ public class Login_Student extends BaseClass {
 		// Select the usertype for login
 		objects.SelectUserTypeStudent().click();
 		objects.EmailField().sendKeys(prop.getProperty("Student_Email"));
-		objects.PasswordField().sendKeys(prop.getProperty("AdminPassword"));
+		objects.PasswordField().sendKeys(prop.getProperty("Password"));
 		wait.until(ExpectedConditions.elementToBeClickable(objects.LoginBtn()));
 		objects.LoginBtn().click();
 		
