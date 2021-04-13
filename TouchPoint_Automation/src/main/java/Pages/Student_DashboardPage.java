@@ -19,6 +19,7 @@ WebDriver driver ;
 	@FindBy(xpath= "//span[@class='fc-icon fc-icon-chevron-right']")WebElement CalendarFrwdBtn;
 	@FindBy(xpath= "//a[@id='student_dasboard']")WebElement StudentDash;
 	@FindBy(xpath= "//img[@alt='dsa-logo']")List <WebElement> DSALogo;
+	@FindBy(xpath= "//h2[@class='fc-toolbar-title']")WebElement CalMonth;
 	
 	//Select user type for login
 	@FindBy(xpath= "//a[@class='nav-link dropdown-toggle user-dp-toggle']")WebElement ViewUserBtn;
@@ -60,5 +61,10 @@ WebDriver driver ;
 	public WebElement selectStaffDrpDwn()
 	{
 		return selectStaffDrpDwn;
+	}
+	
+	public WebElement CalMonth()
+	{
+		return CalMonth;
 	}
 }
