@@ -32,6 +32,7 @@ public class SettingsFunctions_Manage_CourseOfStudy extends BaseClass {
 		if (toastsuccessMessage.contentEquals("Course added successfully")) {
 			Assert.assertEquals(toastsuccessMessage, "Course added successfully");
 			System.out.println("Verify create course of study executed and passed successfully!!!   "+toastsuccessMessage);
+			
 		}
 
 		else {

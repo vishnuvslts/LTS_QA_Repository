@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestFunctions.Student_CreateEvent">
+      <class name="TestFunctions.Login">
         <methods>
+          <include name="verifyLogin"/>
           <include name="initDriver"/>
-          <include name="student_createevent"/>
         </methods>
-      </class> <!-- TestFunctions.Student_CreateEvent -->
+      </class> <!-- TestFunctions.Login -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

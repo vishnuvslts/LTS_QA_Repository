@@ -76,6 +76,7 @@ public class StringHelper {
 		    String strDate= formatter.format(date);  
 		   return strDate; 
 		}
-	
+		
+		
 	}
 	

@@ -1,101 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41340" started-at="2021-04-05T12:59:55 IST" finished-at="2021-04-05T13:00:37 IST">
+  <suite name="Suite" duration-ms="2195" started-at="2021-04-15T17:57:46 IST" finished-at="2021-04-15T17:57:49 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41340" started-at="2021-04-05T12:59:55 IST" finished-at="2021-04-05T13:00:37 IST">
-      <class name="TestFunctions.Login_Student">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Student@2a40cd94]" name="initDriver" is-config="true" duration-ms="5522" started-at="2021-04-05T12:59:50 IST" finished-at="2021-04-05T12:59:55 IST">
+    <test name="Test" duration-ms="2195" started-at="2021-04-15T17:57:46 IST" finished-at="2021-04-15T17:57:49 IST">
+      <class name="TestFunctions.Login">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login@530612ba]" name="initDriver" is-config="true" duration-ms="4146" started-at="2021-04-15T17:57:42 IST" finished-at="2021-04-15T17:57:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Student@2a40cd94]" name="verifyLogin" duration-ms="1069" started-at="2021-04-05T12:59:55 IST" finished-at="2021-04-05T12:59:56 IST">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login@530612ba]" name="verifyLogin" duration-ms="2103" started-at="2021-04-15T17:57:46 IST" finished-at="2021-04-15T17:57:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.Login_Student -->
-      <class name="TestFunctions.Student_CreateEvent">
-        <test-method status="FAIL" signature="student_createevent()[pri:0, instance:TestFunctions.Student_CreateEvent@f4168b8]" name="student_createevent" duration-ms="40202" started-at="2021-04-05T12:59:56 IST" finished-at="2021-04-05T13:00:37 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='student_dasboard']' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='student_dasboard']' (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at TestFunctions.Student_CreateEvent.student_createevent(Student_CreateEvent.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='student_dasboard']"}
-  (Session info: chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-9N55AFQ', ip: '192.168.0.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\LTS\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:65370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ca2ae50b500adc5d93ce17c82ae0d0c8
-*** Element info: {Using=xpath, value=//a[@id='student_dasboard']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- student_createevent -->
-      </class> <!-- TestFunctions.Student_CreateEvent -->
+      </class> <!-- TestFunctions.Login -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
