@@ -1,5 +1,6 @@
 package TestFunctions;
 
+import java.sql.SQLException;
 import java.util.Date;
 
 import org.openqa.selenium.By;
@@ -10,6 +11,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import Common.BaseClass;
+import Common.ExtentManager;
 import Common.Read_OTP;
 import Common.StringHelper;
 import Pages.LoginPage;
@@ -25,7 +27,6 @@ public class Login_Admin extends BaseClass {
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeAdmin()));
-		System.out.println("done");
 		//Read_OTP.OutlookMailReader("Inbox", "DSA OTP", "Your OTP is ", 6);
 		// Select the usertype for login
 		objects.SelectUserTypeAdmin().click();
@@ -33,6 +34,22 @@ public class Login_Admin extends BaseClass {
 		objects.PasswordField().sendKeys(prop.getProperty("AdminPassword"));
 		wait.until(ExpectedConditions.elementToBeClickable(objects.LoginBtn()));
 		objects.LoginBtn().click();
+		// Verify the signed in user details
+				wait.until(ExpectedConditions.elementToBeClickable(objects.ProfileModule()));
+				objects.ProfileModule().click();
+				wait.until(ExpectedConditions.elementToBeClickable(objects.UserEmail()));
+				String UserEmail = objects.UserEmail().getText();
+				if (UserEmail.contentEquals(prop.getProperty("AdminEmail"))) {
+					Assert.assertEquals(UserEmail, prop.getProperty("AdminEmail"));
+					System.out.println("Verify login using valid username and password executed and passed successfully!!!     "
+							+ objects.UserName().getText() + " signed in successfully");
+				
+				}
+
+				else {
+					Assert.fail();
+					System.out.println("Login failed");
+				}
 		
 	}
 

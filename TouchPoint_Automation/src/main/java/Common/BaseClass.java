@@ -35,6 +35,7 @@ public class BaseClass {
 
 		// Launching the browser and navigating to the application URL
 		driver.get(prop.getProperty("URL"));
+		
 	}
 
 }
