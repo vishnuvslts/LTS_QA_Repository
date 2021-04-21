@@ -4,14 +4,15 @@
   <listeners>
     <listener class-name="Common.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="TC_002-Verify manage settings module as admin(failed)">
     <classes>
-      <class name="TestFunctions.Login">
+      <class name="TestFunctions.SettingsFunctions_Manage_Institution">
         <methods>
-          <include name="verifyLogin"/>
+          <include name="editInstitution"/>
           <include name="initDriver"/>
+          <include name="addInstitution"/>
         </methods>
-      </class> <!-- TestFunctions.Login -->
+      </class> <!-- TestFunctions.SettingsFunctions_Manage_Institution -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TC_002-Verify manage settings module as admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

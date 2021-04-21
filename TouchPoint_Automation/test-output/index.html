@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">16 methods, 1 failed,   15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Institution" hash-for-method="editInstitution">editInstitution</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +118,77 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.ChangeDate_PostMethod" hash-for-method="changedate_method">changedate_method</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.Logout" hash-for-method="Logout">Logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.ChangeDate_PostMethod" hash-for-method="login_method">login_method</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_FundingBody" hash-for-method="addFundingBody">addFundingBody</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Institution" hash-for-method="addInstitution">addInstitution</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Role" hash-for-method="addRole">addRole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Add_SupportType" hash-for-method="addSupportType">addSupportType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_FundingBody" hash-for-method="deleteFundingBody">deleteFundingBody</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Institution" hash-for-method="deleteInstitution">deleteInstitution</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Role" hash-for-method="deleteRole">deleteRole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Delete_SupportType" hash-for-method="deleteSupportType">deleteSupportType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_FundingBody" hash-for-method="editFundingBody">editFundingBody</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Role" hash-for-method="editRole">editRole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Role" hash-for-method="updateStatus">updateStatus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_Institution" hash-for-method="updateStatus">updateStatus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.SettingsFunctions_Manage_FundingBody" hash-for-method="updateStatus">updateStatus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestFunctions.Login_Admin" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -124,24 +203,204 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestFunctions.ChangeDate_PostMethod</span>
+              <img src="failed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Manage_Institution</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="changedate_method">
-                  </a> <!-- changedate_method -->
-                  <span class="method-name">changedate_method</span>
+                  <a name="editInstitution">
+                  </a> <!-- editInstitution -->
+                  <span class="method-name">editInstitution</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class=&apos;toast-close-button&apos;]&quot;}
+  (Session info: chrome=90.0.4430.72)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-9N55AFQ&apos;, ip: &apos;10.8.0.17&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\LTS\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:55054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2cd6a9af72ab0c4cbf53e600c5b41e0a
+*** Element info: {Using=xpath, value=//button[@class=&apos;toast-close-button&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at TestFunctions.SettingsFunctions_Manage_Institution.editInstitution(SettingsFunctions_Manage_Institution.java:152)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Manage_Role</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addRole">
+                  </a> <!-- addRole -->
+                  <span class="method-name">addRole</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login_method">
-                  </a> <!-- login_method -->
-                  <span class="method-name">login_method</span>
+                  <a name="deleteRole">
+                  </a> <!-- deleteRole -->
+                  <span class="method-name">deleteRole</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editRole">
+                  </a> <!-- editRole -->
+                  <span class="method-name">editRole</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateStatus">
+                  </a> <!-- updateStatus -->
+                  <span class="method-name">updateStatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Manage_Institution</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addInstitution">
+                  </a> <!-- addInstitution -->
+                  <span class="method-name">addInstitution</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteInstitution">
+                  </a> <!-- deleteInstitution -->
+                  <span class="method-name">deleteInstitution</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateStatus">
+                  </a> <!-- updateStatus -->
+                  <span class="method-name">updateStatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.Login_Admin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin">
+                  </a> <!-- verifyLogin -->
+                  <span class="method-name">verifyLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.Logout</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Logout">
+                  </a> <!-- Logout -->
+                  <span class="method-name">Logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Delete_SupportType</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteSupportType">
+                  </a> <!-- deleteSupportType -->
+                  <span class="method-name">deleteSupportType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Manage_FundingBody</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addFundingBody">
+                  </a> <!-- addFundingBody -->
+                  <span class="method-name">addFundingBody</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteFundingBody">
+                  </a> <!-- deleteFundingBody -->
+                  <span class="method-name">deleteFundingBody</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editFundingBody">
+                  </a> <!-- editFundingBody -->
+                  <span class="method-name">editFundingBody</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateStatus">
+                  </a> <!-- updateStatus -->
+                  <span class="method-name">updateStatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestFunctions.SettingsFunctions_Add_SupportType</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addSupportType">
+                  </a> <!-- addSupportType -->
+                  <span class="method-name">addSupportType</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,11 +418,17 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Common.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TC_002-Verify manage settings module as admin&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestFunctions.ChangeDate_PostMethod&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.Login_Admin&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.SettingsFunctions_Manage_Institution&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.SettingsFunctions_Add_SupportType&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.SettingsFunctions_Manage_Role&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.SettingsFunctions_Delete_SupportType&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.SettingsFunctions_Manage_FundingBody&quot;/&gt;
+      &lt;class name=&quot;TestFunctions.Logout&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- TC_002-Verify manage settings module as admin --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,7 +440,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">TC_002-Verify manage settings module as admin (7 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,20 +466,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login_method')
-data.setCell(0, 2, 'TestFunctions.ChangeDate_PostMethod')
-data.setCell(0, 3, 3257);
+data.setCell(0, 1, 'editInstitution')
+data.setCell(0, 2, 'TestFunctions.SettingsFunctions_Manage_Institution')
+data.setCell(0, 3, 31648);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'changedate_method')
-data.setCell(1, 2, 'TestFunctions.ChangeDate_PostMethod')
-data.setCell(1, 3, 242);
+data.setCell(1, 1, 'addFundingBody')
+data.setCell(1, 2, 'TestFunctions.SettingsFunctions_Manage_FundingBody')
+data.setCell(1, 3, 10957);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addInstitution')
+data.setCell(2, 2, 'TestFunctions.SettingsFunctions_Manage_Institution')
+data.setCell(2, 3, 10916);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addRole')
+data.setCell(3, 2, 'TestFunctions.SettingsFunctions_Manage_Role')
+data.setCell(3, 3, 10875);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'editFundingBody')
+data.setCell(4, 2, 'TestFunctions.SettingsFunctions_Manage_FundingBody')
+data.setCell(4, 3, 9298);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'updateStatus')
+data.setCell(5, 2, 'TestFunctions.SettingsFunctions_Manage_FundingBody')
+data.setCell(5, 3, 8409);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'deleteSupportType')
+data.setCell(6, 2, 'TestFunctions.SettingsFunctions_Delete_SupportType')
+data.setCell(6, 3, 8331);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'editRole')
+data.setCell(7, 2, 'TestFunctions.SettingsFunctions_Manage_Role')
+data.setCell(7, 3, 7842);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'deleteInstitution')
+data.setCell(8, 2, 'TestFunctions.SettingsFunctions_Manage_Institution')
+data.setCell(8, 3, 6898);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'deleteRole')
+data.setCell(9, 2, 'TestFunctions.SettingsFunctions_Manage_Role')
+data.setCell(9, 3, 6816);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyLogin')
+data.setCell(10, 2, 'TestFunctions.Login_Admin')
+data.setCell(10, 3, 6669);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'deleteFundingBody')
+data.setCell(11, 2, 'TestFunctions.SettingsFunctions_Manage_FundingBody')
+data.setCell(11, 3, 6419);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'updateStatus')
+data.setCell(12, 2, 'TestFunctions.SettingsFunctions_Manage_Role')
+data.setCell(12, 3, 6268);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'updateStatus')
+data.setCell(13, 2, 'TestFunctions.SettingsFunctions_Manage_Institution')
+data.setCell(13, 3, 5554);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'Logout')
+data.setCell(14, 2, 'TestFunctions.Logout')
+data.setCell(14, 3, 4683);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'addSupportType')
+data.setCell(15, 2, 'TestFunctions.SettingsFunctions_Add_SupportType')
+data.setCell(15, 3, 4472);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,9 +550,51 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.SettingsFunctions_Manage_Role</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.SettingsFunctions_Manage_Institution</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.Logout</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.SettingsFunctions_Delete_SupportType</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.SettingsFunctions_Add_SupportType</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestFunctions.SettingsFunctions_Manage_FundingBody</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -240,14 +603,94 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestFunctions.ChangeDate_PostMethod</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">login_method</span>
+              <div class="chronological-class-name">TestFunctions.Login_Admin</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">initDriver</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin</span>
+                <span class="method-start">8754 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.SettingsFunctions_Manage_Institution</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addInstitution</span>
+                <span class="method-start">15460 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">changedate_method</span>
-                <span class="method-start">3288 ms</span>
+                <span class="method-name">updateStatus</span>
+                <span class="method-start">26381 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">editInstitution</span>
+                <span class="method-start">31941 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteInstitution</span>
+                <span class="method-start">63618 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.SettingsFunctions_Add_SupportType</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addSupportType</span>
+                <span class="method-start">70522 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.SettingsFunctions_Manage_Role</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addRole</span>
+                <span class="method-start">74998 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateStatus</span>
+                <span class="method-start">85876 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editRole</span>
+                <span class="method-start">92147 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteRole</span>
+                <span class="method-start">99993 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.SettingsFunctions_Delete_SupportType</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">deleteSupportType</span>
+                <span class="method-start">106812 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.SettingsFunctions_Manage_FundingBody</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addFundingBody</span>
+                <span class="method-start">115149 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateStatus</span>
+                <span class="method-start">126112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editFundingBody</span>
+                <span class="method-start">134525 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteFundingBody</span>
+                <span class="method-start">143827 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestFunctions.Logout</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Logout</span>
+                <span class="method-start">150249 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
