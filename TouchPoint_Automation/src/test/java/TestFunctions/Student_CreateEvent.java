@@ -34,7 +34,8 @@ public class Student_CreateEvent extends BaseClass  {
 		System.out.println(CurrMonthActual);
 		
 		if(CurrMonthActual.contains(getCurMonthString)) {
-			System.out.println("pass");
+			objects.CalendarFrwdBtn().click();
+			
 		}
 		else {
 			System.out.println("fail");

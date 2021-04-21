@@ -15,8 +15,9 @@ public class Logout extends BaseClass {
 	@Test
 	public void Logout() throws Exception {
 		LogoutPage objects = new LogoutPage(driver);
-		objects.HomeBtn().click();
 		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(objects.HomeBtn()));
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.ViewUserBtn()));
 		objects.ViewUserBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.LogoutBtn()));

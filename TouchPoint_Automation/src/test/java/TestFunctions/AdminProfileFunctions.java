@@ -26,9 +26,12 @@ public class AdminProfileFunctions extends BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(objects.FirstName()));
 		// get all profile details
 		String getFirstName = objects.FirstName().getText();
+		
 		String getLastName = objects.LastName().getText();
 		String getDOB = objects.DOB().getText();
-		String getPhone = objects.Phone().getText();
+		String getOrganisation = objects.Organisation().getText();
+		System.out.println(getOrganisation);
+		System.out.println(prop.getProperty("Organisation"));
 		String getMobile = objects.Mobile().getText();
 		String getRegEmail = objects.SFEmail().getText();
 		String getAddress = objects.Address().getText();
@@ -62,15 +65,7 @@ public class AdminProfileFunctions extends BaseClass {
 			System.out.println("Test failure observed");
 		}
 
-		if (getPhone.contentEquals(prop.getProperty("Phone"))) {
-			Assert.assertEquals(getPhone, prop.getProperty("Phone"));
-			System.out
-					.println("Verify Phone executed & passed successfully!!!   Phone of signed in user is " + getPhone);
-
-		} else {
-			Assert.fail();
-			System.out.println("Test failure observed");
-		}
+		
 
 		if (getMobile.contentEquals(prop.getProperty("Mobile"))) {
 			Assert.assertEquals(getMobile, prop.getProperty("Mobile"));
@@ -81,17 +76,16 @@ public class AdminProfileFunctions extends BaseClass {
 			Assert.fail();
 			System.out.println("Test failure observed");
 		}
-
-		if (getRegEmail.contentEquals(prop.getProperty("SFERegEmail"))) {
-			Assert.assertEquals(getRegEmail, prop.getProperty("SFERegEmail"));
+		if (getOrganisation.contentEquals(prop.getProperty("Organisation"))) {
+			Assert.assertEquals(getOrganisation, prop.getProperty("Organisation"));
 			System.out.println(
-					"Verify SFE registered email executed & passed successfully!!!   SFE registered email of signed in user is "
-							+ getRegEmail);
+					"Verify Organisation executed & passed successfully!!!   Organisation of signed in user is " + getMobile);
 
 		} else {
 			Assert.fail();
 			System.out.println("Test failure observed");
 		}
+		
 
 		if (getAddress.contentEquals(prop.getProperty("Address"))) {
 			Assert.assertEquals(getAddress, prop.getProperty("Address"));
@@ -116,11 +110,10 @@ public class AdminProfileFunctions extends BaseClass {
 		objects.LastNameEdit().clear();
 		objects.LastNameEdit().sendKeys(prop.getProperty("LastNameEdited"));
 
-		actions = new Actions(driver);
-		actions.moveToElement(objects.AddressEdit());
-		actions.perform();
-		objects.PhoneEdit().clear();
-		objects.PhoneEdit().sendKeys(prop.getProperty("PhoneEdited"));
+		//actions = new Actions(driver);
+		//actions.moveToElement(objects.AddressEdit());
+		//actions.perform();
+		
 		objects.MobileEdit().clear();
 		objects.MobileEdit().sendKeys(prop.getProperty("MobileEdited"));
 		objects.AddressEdit().clear();
@@ -130,9 +123,9 @@ public class AdminProfileFunctions extends BaseClass {
 		objects.ProfileUpdateBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.EditSuccessMessage()));
 		String getToastMessage = objects.EditSuccessMessage().getText();
-		if (getToastMessage.contentEquals("Profile updated successfully")) {
-			Assert.assertEquals(getToastMessage, "Profile updated successfully");
-			System.out.println("Verify profile edit executed & passed successfully!!!   " + getToastMessage);
+		if (getToastMessage.contentEquals("Admin profile updated successfully")) {
+			Assert.assertEquals(getToastMessage, "Admin profile updated successfully");
+			System.out.println("Verify admin profile edit executed & passed successfully!!!   " + getToastMessage);
 
 		} else {
 			Assert.fail();
@@ -142,7 +135,6 @@ public class AdminProfileFunctions extends BaseClass {
 		// get all profile details
 		String getEditedFirstName = objects.FirstName().getText();
 		String getEditedLastName = objects.LastName().getText();
-		String getEditedPhone = objects.Phone().getText();
 		String getEditedMobile = objects.Mobile().getText();
 		String getEditedAddress = objects.Address().getText();
 		// Verify all the profile details
@@ -168,15 +160,7 @@ public class AdminProfileFunctions extends BaseClass {
 			System.out.println("Test failure observed");
 		}
 
-		if (getEditedPhone.contentEquals(prop.getProperty("PhoneEdited"))) {
-			Assert.assertEquals(getEditedPhone, prop.getProperty("PhoneEdited"));
-			System.out.println("Verify Phone edit executed & passed successfully!!!   Phone of signed in user is "
-					+ getEditedPhone);
 
-		} else {
-			Assert.fail();
-			System.out.println("Test failure observed");
-		}
 
 		if (getEditedMobile.contentEquals(prop.getProperty("MobileEdited"))) {
 			Assert.assertEquals(getEditedMobile, prop.getProperty("MobileEdited"));
@@ -206,8 +190,6 @@ public class AdminProfileFunctions extends BaseClass {
 		objects.FirstNameEdit().sendKeys(prop.getProperty("FirstName"));
 		objects.LastNameEdit().clear();
 		objects.LastNameEdit().sendKeys(prop.getProperty("LastName"));
-		objects.PhoneEdit().clear();
-		objects.PhoneEdit().sendKeys(prop.getProperty("Phone"));
 		objects.MobileEdit().clear();
 		objects.MobileEdit().sendKeys(prop.getProperty("Mobile"));
 		objects.AddressEdit().clear();

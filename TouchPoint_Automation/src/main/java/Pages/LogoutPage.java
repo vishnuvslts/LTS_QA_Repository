@@ -20,7 +20,7 @@ WebDriver driver ;
 	@FindBy(xpath= "//span[text()='Logout']")WebElement LogoutBtn;
 	
 	//Common
-		@FindBy(xpath= "//a[@class='navbar-brand']")WebElement HomeBtn;
+		@FindBy(xpath= "//img[@class='brand-logo']")WebElement HomeBtn;
 		@FindBy(xpath= "//img[@alt='dsa-logo']")List <WebElement> DSALogo;
 	public WebElement ViewUserBtn()
 	{

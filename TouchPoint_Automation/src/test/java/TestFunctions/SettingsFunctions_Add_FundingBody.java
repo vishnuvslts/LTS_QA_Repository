@@ -8,35 +8,35 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_Add_Institution extends BaseClass {
+public class SettingsFunctions_Add_FundingBody extends BaseClass {
 	
 	public static WebDriverWait wait;
-	@Test
-	public void addInstitution() throws InterruptedException {
+	@Test(priority =1)
+	public void addFundingBody() throws InterruptedException {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		objects.HomeBtn().click();
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.InstitutionSubModule()));
-		objects.InstitutionSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.FundingBodySubModule()));
+		objects.FundingBodySubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
 		objects.AddNew().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterInstitutionNameField()));
-		objects.EnterInstitutionNameField().sendKeys(prop.getProperty("InstitutionName"));
-		objects.EnterInstitutionDescField().sendKeys(prop.getProperty("InstitutionDesc"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterFundingBodyName()));
+		objects.EnterFundingBodyName().sendKeys(prop.getProperty("FBName"));
+		objects.EnterFundingBodyDesc().sendKeys(prop.getProperty("FBDesc"));
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		if (toastsuccessMessage.contentEquals("Institution created successfully")) {
-			Assert.assertEquals(toastsuccessMessage, "Institution created successfully");
-			System.out.println("Verify create institution executed and passed successfully!!!   "+toastsuccessMessage);
+		if (toastsuccessMessage.contentEquals("Funding Body created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Funding Body created successfully");
+			System.out.println("Verify create funding body executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 		
-		else if (toastsuccessMessage.contentEquals("Institution already exists")) {
-			Assert.assertEquals(toastsuccessMessage, "Institution already exists");
+		else if (toastsuccessMessage.contentEquals("Funding body name already exists!")) {
+			Assert.assertEquals(toastsuccessMessage, "Funding body name already exists!");
 			System.out.println("Verify create institution executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 
@@ -47,6 +47,8 @@ public class SettingsFunctions_Add_Institution extends BaseClass {
 			Assert.fail();
 			
 		}
-		
+				
 	}
+	
+	
 }

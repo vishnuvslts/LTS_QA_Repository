@@ -30,11 +30,14 @@ public class SettingsFunctions_Manage_SupportType extends BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		if (toastsuccessMessage.contentEquals("Support type created successfully.")) {
-			Assert.assertEquals(toastsuccessMessage, "Support type created successfully.");
+		if (toastsuccessMessage.contentEquals("Support type created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Support type created successfully");
 			System.out.println("Verify create SupportType executed and passed successfully!!!   "+toastsuccessMessage);
 		}
-
+		else if (toastsuccessMessage.contentEquals("Support type already exists")) {
+			Assert.assertEquals(toastsuccessMessage, "Support type already exists");
+			System.out.println("Verify create SupportType executed and passed successfully!!!   "+toastsuccessMessage);
+		}
 		else {
 			System.out.println("Verification failed");
 			Exception e = new Exception();
@@ -68,6 +71,7 @@ public class SettingsFunctions_Manage_SupportType extends BaseClass {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SupportTypeSubModule()));
@@ -109,6 +113,7 @@ public class SettingsFunctions_Manage_SupportType extends BaseClass {
 	public void editSupportType() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SupportTypeSubModule()));
@@ -131,8 +136,8 @@ public class SettingsFunctions_Manage_SupportType extends BaseClass {
 		String editedSupportTypeName = objects.entrySearched().getText();
 		String editedSupportTypeDesc = objects.entrydescSearched().getText();
 		
-		if (toastMessage.contentEquals("Support type updated successfully.")) {
-			Assert.assertEquals(toastMessage, "Support type updated successfully.");
+		if (toastMessage.contentEquals("Support type updated successfully")) {
+			Assert.assertEquals(toastMessage, "Support type updated successfully");
 			System.out.println(
 					"Verify update SupportType details  executed & passed successfully!!!  "
 							+ toastMessage);
@@ -167,34 +172,5 @@ public class SettingsFunctions_Manage_SupportType extends BaseClass {
 		}
 		
 	}
-	@Test(priority =4, dependsOnMethods = { "editSupportType" }, alwaysRun = true)
-	public void deleteSupportType() throws Exception {
-		SettingsPage objects = new SettingsPage(driver);
-		wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
-		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
-		objects.SupportTypeSubModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
-		objects.searchField().sendKeys(prop.getProperty("SupportTypeNameEdited"));
-		Thread.sleep(2000);
-		objects.deleteBtn().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.cnfrmYesBtn()));
-		objects.cnfrmYesBtn().click();
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
-		String toastDeleteMessage = objects.toastMsg().getText();
-		objects.toastCloseBtn().click();
-		System.out.println(toastDeleteMessage);
-		if (toastDeleteMessage.contentEquals("Support type deleted successfully.")) {
-			Assert.assertEquals(toastDeleteMessage, "Support type deleted successfully.");
-			System.out.println(
-					"Verify delete SupportType details  executed & passed successfully!!!  "
-							+ toastDeleteMessage);
-
-		} else {
-			Assert.fail();
-			System.out.println("Test failure observed");
-		}
-	}
+	
 }

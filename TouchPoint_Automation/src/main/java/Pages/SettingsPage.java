@@ -39,10 +39,13 @@ public class SettingsPage {
 	WebElement entrydescSearched;
 	@FindBy(xpath = "//i[@class='fa fa-thumbs-down']")
 	WebElement noentryFound;
-	@FindBy(xpath = "//a[@class='navbar-brand']")
+	@FindBy(xpath = "//img[@class='brand-logo']")
 	WebElement HomeBtn;
 	@FindBy(xpath = "//span[@class='add-new']")
 	WebElement AddNew;
+	@FindBy(xpath = "//i[@class='ri-add-line']")
+	WebElement AddLineBtn;
+
 
 	// Course
 	@FindBy(xpath = "//a[text()='Course of Study']")
@@ -85,6 +88,50 @@ public class SettingsPage {
 	WebElement EnterRoleDescField;
 	@FindBy(xpath = "//select[@id='settings_role_supporttype']")
 	WebElement SelectSupportType;
+
+	// Document Category
+	@FindBy(xpath = "//a[text()='Document Category']")
+	WebElement DocumentCategorySubModule;
+	@FindBy(xpath = "//input[@id='settings_doccat_documentname']")
+	WebElement EnterDocumentCategoryNameField;
+	
+	// Document File
+		@FindBy(xpath = "//a[text()='Document File']")
+		WebElement DocumentFileSubModule;
+		
+		@FindBy(xpath = "//select[@id='settings_document_cat']")
+		WebElement SelectDocumentCategoryDropDown;
+		@FindBy(xpath = "//input[@id='settings_docfile_name']")
+		WebElement EnterDocumentFileNameField;
+		@FindBy(xpath = "//p[contains(.,'Select a file')]")
+		WebElement BrowseFile;
+		
+		@FindBy(xpath = "//input[@id='file-9-0']")
+		WebElement UploadFile;
+		
+		//File Bundling
+		@FindBy(xpath = "//a[text()='File Bundling']")
+		WebElement FileBundlingSubModule;
+		@FindBy(xpath = "//input[@id='settings_bundle_name']")
+		WebElement EnterFileBundlingName;
+		@FindBy(xpath = "//input[@id='settings_bundle_desc']")
+		WebElement EnterFileBundlingDesc;
+		@FindBy(xpath = "//select[@id='bundle_document_cat']")
+		WebElement SelectBundleDocumentCategoryDropDown;
+		@FindBy(xpath = "(//span[@class='checkmark doc-check-checkbox'])[1]")
+		WebElement CheckBox_Assign;
+		@FindBy(xpath = "(//span[@class='checkmark doc-check-checkbox'])[2]")
+		WebElement CheckBox_TobeSignoff;
+
+		//Funding Body
+		@FindBy(xpath = "//a[text()='Funding Body']")
+		WebElement FundingBodySubModule;
+		@FindBy(xpath = "//input[@id='settings_fb_name']")
+		WebElement EnterFundingBodyName;
+		@FindBy(xpath = "//input[@id='settings_fb_description']")
+		WebElement EnterFundingBodyDesc;
+		
+	
 
 	public WebElement SettingsModule() {
 		return SettingsModule;
@@ -142,11 +189,17 @@ public class SettingsPage {
 		return AddNew;
 	}
 	
+	public WebElement AddLineBtn() {
+		return AddLineBtn;
+	}
 	
+
+	
+	
+
 	public WebElement CourseSubModule() {
 		return CourseSubModule;
 	}
-
 
 	public WebElement EnterCourseNameField() {
 		return EnterCourseNameField;
@@ -155,11 +208,10 @@ public class SettingsPage {
 	public WebElement EnterCourseDescField() {
 		return EnterCourseDescField;
 	}
-	
+
 	public WebElement InstitutionSubModule() {
 		return InstitutionSubModule;
 	}
-
 
 	public WebElement EnterInstitutionNameField() {
 		return EnterInstitutionNameField;
@@ -168,11 +220,10 @@ public class SettingsPage {
 	public WebElement EnterInstitutionDescField() {
 		return EnterInstitutionDescField;
 	}
-	
+
 	public WebElement OrganisationSubModule() {
 		return OrganisationSubModule;
 	}
-
 
 	public WebElement EnterOrganisationNameField() {
 		return EnterOrganisationNameField;
@@ -181,11 +232,10 @@ public class SettingsPage {
 	public WebElement EnterOrganisationDescField() {
 		return EnterOrganisationDescField;
 	}
-	
+
 	public WebElement SupportTypeSubModule() {
 		return SupportTypeSubModule;
 	}
-
 
 	public WebElement EnterSupportTypeNameField() {
 		return EnterSupportTypeNameField;
@@ -194,11 +244,10 @@ public class SettingsPage {
 	public WebElement EnterSupportTypeDescField() {
 		return EnterSupportTypeDescField;
 	}
-	
+
 	public WebElement RoleSubModule() {
 		return RoleSubModule;
 	}
-
 
 	public WebElement EnterRoleNameField() {
 		return EnterRoleNameField;
@@ -207,8 +256,63 @@ public class SettingsPage {
 	public WebElement EnterRoleDescField() {
 		return EnterRoleDescField;
 	}
-	
+
 	public WebElement SelectSupportType() {
 		return SelectSupportType;
 	}
+	
+	public WebElement DocumentCategorySubModule() {
+		return DocumentCategorySubModule;
+	}
+	
+	public WebElement EnterDocumentCategoryNameField() {
+		return EnterDocumentCategoryNameField;
+	}
+	
+	public WebElement DocumentFileSubModule() {
+		return DocumentFileSubModule;
+	}
+	
+	public WebElement SelectDocumentCategoryDropDown() {
+		return SelectDocumentCategoryDropDown;
+	}
+	public WebElement EnterDocumentFileNameField() {
+		return EnterDocumentFileNameField;
+	}
+	
+	public WebElement BrowseFile() {
+		return BrowseFile;
+	}
+	public WebElement UploadFile() {
+		return UploadFile;
+	}
+	public WebElement FileBundlingSubModule() {
+		return FileBundlingSubModule;
+	}
+	public WebElement EnterFileBundlingName() {
+		return EnterFileBundlingName;
+	}
+	public WebElement EnterFileBundlingDesc() {
+		return EnterFileBundlingDesc;
+	}
+	public WebElement SelectBundleDocumentCategoryDropDown() {
+		return SelectBundleDocumentCategoryDropDown;
+	}
+	
+	public WebElement CheckBox_Assign() {
+		return CheckBox_Assign;
+	}
+	public WebElement CheckBox_TobeSignoff() {
+		return CheckBox_TobeSignoff;
+	}
+	public WebElement FundingBodySubModule() {
+		return FundingBodySubModule;
+	}
+	public WebElement EnterFundingBodyName() {
+		return EnterFundingBodyName;
+	}
+	public WebElement EnterFundingBodyDesc() {
+		return EnterFundingBodyDesc;
+	}
+
 }

@@ -28,16 +28,19 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		objects.EnterRoleNameField().sendKeys(prop.getProperty("RoleName"));
 		objects.EnterRoleDescField().sendKeys(prop.getProperty("RoleDesc"));
 		Select select = new Select(objects.SelectSupportType()); 
-		select.selectByValue("1");
+		select.selectByVisibleText(prop.getProperty("SupportTypeName"));;
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		if (toastsuccessMessage.contentEquals("Role created successfully.")) {
-			Assert.assertEquals(toastsuccessMessage, "Role created successfully.");
+		if (toastsuccessMessage.contentEquals("Role created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Role created successfully");
 			System.out.println("Verify create Role executed and passed successfully!!!   "+toastsuccessMessage);
 		}
-
+		else if (toastsuccessMessage.contentEquals("Role already exists")) {
+			Assert.assertEquals(toastsuccessMessage, "Role already exists");
+			System.out.println("Verify create Role executed and passed successfully!!!   "+toastsuccessMessage);
+		}
 		else {
 			System.out.println("Verification failed");
 			Exception e = new Exception();
@@ -71,6 +74,7 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
@@ -109,9 +113,10 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		
 	}
 	@Test(priority =3, dependsOnMethods = { "addRole" }, alwaysRun = true)
-	public void editCourse() throws Exception {
+	public void editRole() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
@@ -134,8 +139,8 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		String editedRoleName = objects.entrySearched().getText();
 		String editedRoleDesc = objects.entrydescSearched().getText();
 		
-		if (toastMessage.contentEquals("Role updated successfully.")) {
-			Assert.assertEquals(toastMessage, "Role updated successfully.");
+		if (toastMessage.contentEquals("Role updated successfully")) {
+			Assert.assertEquals(toastMessage, "Role updated successfully");
 			System.out.println(
 					"Verify update Role details  executed & passed successfully!!!  "
 							+ toastMessage);
@@ -170,13 +175,14 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		}
 		
 	}
-	@Test(priority =4, dependsOnMethods = { "editCourse" }, alwaysRun = true)
-	public void deleteCourse() throws Exception {
+	@Test(priority =4, dependsOnMethods = { "editRole" }, alwaysRun = true)
+	public void deleteRole() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
+		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.CourseSubModule()));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.RoleSubModule()));
 		objects.RoleSubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
 		objects.searchField().sendKeys(prop.getProperty("RoleNameEdited"));
@@ -189,8 +195,8 @@ public class SettingsFunctions_Manage_Role extends BaseClass {
 		String toastDeleteMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
 		System.out.println(toastDeleteMessage);
-		if (toastDeleteMessage.contentEquals("Role deleted successfully.")) {
-			Assert.assertEquals(toastDeleteMessage, "Role deleted successfully.");
+		if (toastDeleteMessage.contentEquals("Role deleted successfully")) {
+			Assert.assertEquals(toastDeleteMessage, "Role deleted successfully");
 			System.out.println(
 					"Verify delete Role details  executed & passed successfully!!!  "
 							+ toastDeleteMessage);

@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import com.jayway.jsonpath.JsonPath;
+import com.sun.xml.fastinfoset.sax.Properties;
 
 import Common.BaseClass;
 import Common.ExtentManager;
@@ -35,7 +36,7 @@ public class ChangeDate_PostMethod {
 
 		request.header("Content-Type", "application/json");
 		JSONObject json = new JSONObject();
-		json.put("email", "sruthy.varghese@ltslean.com");
+		json.put("email", "automationadmin@mailinator.com");
 		json.put("password", "654321Aa");
 		json.put("userType", "admin");
 		

@@ -6,11 +6,27 @@
 		<listener class-name="Common.TestListener" />
 
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
 
-      <class name="TestFunctions.ChangeDate_PostMethod"/>
+			
 
-    </classes>
-  </test> <!-- Test -->
+<test name="TC_002-Verify manage settings module as admin">
+		<classes>
+		<class name="TestFunctions.Login_Admin" />
+		<class name="TestFunctions.SettingsFunctions_Manage_Institution" />
+			<class name="TestFunctions.SettingsFunctions_Add_SupportType" />
+			<class name="TestFunctions.SettingsFunctions_Manage_Role" />
+			<class name="TestFunctions.SettingsFunctions_Delete_SupportType" />
+			<class name="TestFunctions.SettingsFunctions_Manage_FundingBody" />
+			<class name="TestFunctions.Logout" />
+			</classes>
+
+
+
+
+
+
+
+
+		
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

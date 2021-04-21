@@ -22,7 +22,7 @@ public class Login_Admin extends BaseClass {
 
 	
 	@Test
-	public void verifyLogin() {
+	public void verifyLogin() throws Exception {
 		LoginPage objects = new LoginPage(driver);
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
@@ -51,6 +51,7 @@ public class Login_Admin extends BaseClass {
 					System.out.println("Login failed");
 				}
 		
+				driver.navigate().refresh();
 	}
 
 }

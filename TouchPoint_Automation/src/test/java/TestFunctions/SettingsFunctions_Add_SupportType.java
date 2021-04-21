@@ -27,6 +27,24 @@ public class SettingsFunctions_Add_SupportType extends BaseClass {
 		objects.EnterSupportTypeNameField().sendKeys(prop.getProperty("SupportTypeName"));
 		objects.EnterSupportTypeDescField().sendKeys(prop.getProperty("SupportTypeDesc"));
 		objects.SaveBtn().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
+		String toastsuccessMessage = objects.toastMsg().getText();
+		objects.toastCloseBtn().click();
+		if (toastsuccessMessage.contentEquals("Support type created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Support type created successfully");
+			System.out.println("Verify create SupportType executed and passed successfully!!!   "+toastsuccessMessage);
+		}
+		else if (toastsuccessMessage.contentEquals("Support type already exists")) {
+			Assert.assertEquals(toastsuccessMessage, "Support type already exists");
+			System.out.println("Verify create SupportType executed and passed successfully!!!   "+toastsuccessMessage);
+		}
+		else {
+			System.out.println("Verification failed");
+			Exception e = new Exception();
+			e.printStackTrace();
+			Assert.fail();
+			
+		}
 		
 	}
 }

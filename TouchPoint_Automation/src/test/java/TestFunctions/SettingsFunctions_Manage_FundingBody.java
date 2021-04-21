@@ -8,35 +8,36 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_Manage_Institution extends BaseClass {
+public class SettingsFunctions_Manage_FundingBody extends BaseClass {
 	
 	public static WebDriverWait wait;
 	@Test(priority =1)
-	public void addInstitution() throws InterruptedException {
+	public void addFundingBody() throws InterruptedException {
 		
 		SettingsPage objects = new SettingsPage(driver);
 		objects.HomeBtn().click();
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.InstitutionSubModule()));
-		objects.InstitutionSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.FundingBodySubModule()));
+		objects.FundingBodySubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
 		objects.AddNew().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterInstitutionNameField()));
-		objects.EnterInstitutionNameField().sendKeys(prop.getProperty("InstitutionName"));
-		objects.EnterInstitutionDescField().sendKeys(prop.getProperty("InstitutionDesc"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterFundingBodyName()));
+		objects.EnterFundingBodyName().sendKeys(prop.getProperty("FBName"));
+		objects.EnterFundingBodyDesc().sendKeys(prop.getProperty("FBDesc"));
 		objects.SaveBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
 		String toastsuccessMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
-		if (toastsuccessMessage.contentEquals("Institution created successfully")) {
-			Assert.assertEquals(toastsuccessMessage, "Institution created successfully");
-			System.out.println("Verify create institution executed and passed successfully!!!   "+toastsuccessMessage);
+		System.out.println(toastsuccessMessage);
+		if (toastsuccessMessage.contentEquals("Funding Body created successfully")) {
+			Assert.assertEquals(toastsuccessMessage, "Funding Body created successfully");
+			System.out.println("Verify create funding body executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 		
-		else if (toastsuccessMessage.contentEquals("Institution already exists")) {
-			Assert.assertEquals(toastsuccessMessage, "Institution already exists");
+		else if (toastsuccessMessage.contentEquals("Funding body name already exists!")) {
+			Assert.assertEquals(toastsuccessMessage, "Funding body name already exists!");
 			System.out.println("Verify create institution executed and passed successfully!!!   "+toastsuccessMessage);
 		}
 
@@ -49,13 +50,13 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		}
 		
 		Thread.sleep(3000);
-		objects.searchField().sendKeys(prop.getProperty("InstitutionName"));
+		objects.searchField().sendKeys(prop.getProperty("FBName"));
 		Thread.sleep(3000);
 		String addedentry = objects.entrySearched().getText();
-		if (addedentry.contentEquals(prop.getProperty("InstitutionName"))) {
-			Assert.assertEquals(addedentry, prop.getProperty("InstitutionName"));
+		if (addedentry.contentEquals(prop.getProperty("FBName"))) {
+			Assert.assertEquals(addedentry, prop.getProperty("FBName"));
 			System.out.println(
-					"Verify institution list executed & passed successfully!!!   New institution added is "
+					"Verify funding body list executed & passed successfully!!!   New institution added is "
 							+ addedentry);
 
 		} else {
@@ -68,7 +69,7 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		
 	}
 	
-	@Test(priority =2, dependsOnMethods = { "addInstitution" }, alwaysRun = true)
+	@Test(priority =2, dependsOnMethods = { "addFundingBody" }, alwaysRun = true)
 	public void updateStatus() throws Exception {
 		
 		SettingsPage objects = new SettingsPage(driver);
@@ -76,10 +77,10 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.InstitutionSubModule()));
-		objects.InstitutionSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.FundingBodySubModule()));
+		objects.FundingBodySubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("InstitutionName"));
+		objects.searchField().sendKeys(prop.getProperty("FBName"));
 		String statusText = objects.statusBtn().getText();
 		Thread.sleep(2000);
 		objects.statusBtn().click();
@@ -111,24 +112,24 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		
 		
 	}
-	@Test(priority =3, dependsOnMethods = { "addInstitution" }, alwaysRun = true)
-	public void editInstitution() throws Exception {
+	@Test(priority =3, dependsOnMethods = { "addFundingBody" }, alwaysRun = true)
+	public void editFundingBody() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.InstitutionSubModule()));
-		objects.InstitutionSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.FundingBodySubModule()));
+		objects.FundingBodySubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.searchField()));
-		objects.searchField().sendKeys(prop.getProperty("InstitutionName"));
+		objects.searchField().sendKeys(prop.getProperty("FBName"));
 		Thread.sleep(2000);
 		objects.editBtn().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterInstitutionNameField()));
-		objects.EnterInstitutionNameField().clear();
-		objects.EnterInstitutionNameField().sendKeys(prop.getProperty("InstitutionNameEdited"));
-		objects.EnterInstitutionDescField().clear();
-		objects.EnterInstitutionDescField().sendKeys(prop.getProperty("InstitutionDescEdited"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterFundingBodyName()));
+		objects.EnterFundingBodyName().clear();
+		objects.EnterFundingBodyName().sendKeys(prop.getProperty("FBNameEdited"));
+		objects.EnterFundingBodyDesc().clear();
+		objects.EnterFundingBodyDesc().sendKeys(prop.getProperty("FBDescEdited"));
 		//update
 		objects.SaveBtn().click();
 		Thread.sleep(2000);
@@ -138,10 +139,10 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		String editedInstitutionName = objects.entrySearched().getText();
 		String editedInstitutionDesc = objects.entrydescSearched().getText();
 		
-		if (toastMessage.contentEquals("Institution updated successfully")) {
-			Assert.assertEquals(toastMessage, "Institution updated successfully");
+		if (toastMessage.contentEquals("Funding Body updated successfully")) {
+			Assert.assertEquals(toastMessage, "Funding Body updated successfully");
 			System.out.println(
-					"Verify update institution details  executed & passed successfully!!!  "
+					"Verify update Funding Body executed & passed successfully!!!  "
 							+ toastMessage);
 
 		} else {
@@ -151,40 +152,20 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		
 		objects.toastCloseBtn().click();
 		
-		if (editedInstitutionName.contentEquals(prop.getProperty("InstitutionNameEdited"))) {
-			Assert.assertEquals(editedInstitutionName, prop.getProperty("InstitutionNameEdited"));
-			System.out.println(
-					"Verify edit institution name  executed & passed successfully!!!   Updated institution name is "
-							+ editedInstitutionName);
-
-		} else {
-			Assert.fail();
-			System.out.println("Test failure observed");
-		}
 		
-		if (editedInstitutionDesc.contentEquals(prop.getProperty("InstitutionDescEdited"))) {
-			Assert.assertEquals(editedInstitutionDesc, prop.getProperty("InstitutionDescEdited"));
-			System.out.println(
-					"Verify edit institution description  executed & passed successfully!!!   Updated institution description is "
-							+ editedInstitutionDesc);
-
-		} else {
-			Assert.fail();
-			System.out.println("Test failure observed");
-		}
 		
 	}
-	@Test(priority =4, dependsOnMethods = { "editInstitution" }, alwaysRun = true)
-	public void deleteInstitution() throws Exception {
+	@Test(priority =4, dependsOnMethods = { "editFundingBody" }, alwaysRun = true)
+	public void deleteFundingBody() throws Exception {
 		SettingsPage objects = new SettingsPage(driver);
 		wait = new WebDriverWait(driver, 10);
 		objects.HomeBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SettingsModule()));
 		objects.SettingsModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.InstitutionSubModule()));
-		objects.InstitutionSubModule().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.FundingBodySubModule()));
+		objects.FundingBodySubModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
-		objects.searchField().sendKeys(prop.getProperty("InstitutionNameEdited"));
+		objects.searchField().sendKeys(prop.getProperty("FBNameEdited"));
 		Thread.sleep(2000);
 		objects.deleteBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.cnfrmYesBtn()));
@@ -194,10 +175,10 @@ public class SettingsFunctions_Manage_Institution extends BaseClass {
 		String toastDeleteMessage = objects.toastMsg().getText();
 		objects.toastCloseBtn().click();
 		System.out.println(toastDeleteMessage);
-		if (toastDeleteMessage.contentEquals("Institution deleted successfully")) {
-			Assert.assertEquals(toastDeleteMessage, "Institution deleted successfully");
+		if (toastDeleteMessage.contentEquals("Successfully deleted funding body")) {
+			Assert.assertEquals(toastDeleteMessage, "Successfully deleted funding body");
 			System.out.println(
-					"Verify delete institution details  executed & passed successfully!!!  "
+					"Verify delete Funding Body executed & passed successfully!!!  "
 							+ toastDeleteMessage);
 
 		} else {
