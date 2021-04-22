@@ -38,6 +38,8 @@ WebDriver driver ;
 	
 	//Verify signed in user
 	@FindBy(xpath= "//a[@id='admin_profile']")WebElement ProfileModule;
+	@FindBy(xpath= "//a[@id='staff_profile']")WebElement StaffProfileModule;
+	@FindBy(xpath= "//a[@id='student_profile']")WebElement StudentProfileModule;
 	@FindBy(xpath= "//p[@class='stu-subtext']")WebElement UserEmail;
 	@FindBy(xpath= "//p[@class='student-name']")WebElement UserName;
 	
@@ -125,5 +127,13 @@ WebDriver driver ;
 	{
 		return agreeDocs;
 	}
-
+	public WebElement StaffProfileModule()
+	{
+		return StaffProfileModule;
+	}
+	
+	public WebElement StudentProfileModule()
+	{
+		return StudentProfileModule;
+	}
 }

@@ -14,7 +14,7 @@ public class StudentPage {
 	}
 
 	// Common
-	@FindBy(xpath = "//a[@class='navbar-brand']")
+	@FindBy(xpath = "//img[@class='brand-logo']")
 	WebElement HomeBtn;
 	
 	@FindBy(xpath = "//div[@class='toast-message']")
@@ -41,8 +41,8 @@ public class StudentPage {
 	WebElement student_phone;
 	@FindBy(xpath = "//input[@placeholder='Enter mobile']")
 	WebElement student_mobile;
-	@FindBy(xpath = "//input[@placeholder='Enter sfe registered email']")
-	WebElement student_SFEEmail;
+	@FindBy(xpath = "//input[@id='add_student_email']")
+	WebElement student_RegisteredEmail;
 	@FindBy(xpath = "//textarea[@id='add_student_address']")
 	WebElement student_address;
 	@FindBy(xpath = "//input[@id='add_student_dateofbirth']")
@@ -74,14 +74,29 @@ public class StudentPage {
 	@FindBy(xpath = "//input[@id='add_student_support_enddate_1']")
 	WebElement Student_Support_EndDate;
 	
+	
+	
 	@FindBy(xpath = "//input[@id='add_student_support_startdate_1']")
 	WebElement Student_Support_StartDate;
+	
+	@FindBy(xpath = "//select[@id='add_student_role_1']")
+	WebElement Student_SelectRole_Rate;
+	
+	@FindBy(xpath = "//select[@id='add_student_fundingBody_1']")
+	WebElement Student_SelectFB;
+	
+	@FindBy(xpath = "//input[@id='add_student_rate_1']")
+	WebElement Student_RateFB;
+	
 	//Date Picker
 	@FindBy(xpath = "//button[@aria-label='Next Month']")
 	WebElement Calendar_NextMonthBtn;
 	
 	@FindBy(xpath = "//div[text()=14]")
-	WebElement Student_courseDate;
+	WebElement Student_course_startDate;
+	
+	@FindBy(xpath = "//div[text()=29]")
+	WebElement Student_course_endDate;
 
 	@FindBy(xpath = "//input[@class='form-control search-inp']")
 	WebElement searchField;
@@ -93,6 +108,17 @@ public class StudentPage {
 	WebElement deleteBtn;
 	@FindBy(xpath = "//button[@class='yes-btn']")
 	WebElement cnfrmYesBtn;
+	
+	@FindBy(xpath = "//h4[text()='Assign Document']")
+	WebElement AssignDocPageTitle;
+	
+	@FindBy(xpath = "(//select[@id='bundle_document_cat'])[1]")
+	WebElement selectBundleDropdown;
+	
+	@FindBy(xpath = "//i[@class='ri-add-line']")
+	WebElement AddLineBtn;
+	@FindBy(xpath = "//div[@class='docs-area']")
+	WebElement Document;
 	
 	// common
 	public WebElement HomeBtn() {
@@ -139,8 +165,8 @@ public class StudentPage {
 		return student_mobile;
 	}
 
-	public WebElement student_SFEEmail() {
-		return student_SFEEmail;
+	public WebElement student_RegisteredEmail() {
+		return student_RegisteredEmail;
 	}
 
 	public WebElement student_address() {
@@ -186,6 +212,18 @@ public class StudentPage {
 		return Student_Support_StartDate;
 	}
 	
+	public WebElement Student_SelectRole_Rate() {
+		return Student_SelectRole_Rate;
+	}
+	
+	public WebElement Student_SelectFB() {
+		return Student_SelectFB;
+	}
+	
+	public WebElement Student_RateFB() {
+		return Student_RateFB;
+	}
+	
 	
 	public WebElement Calendar_NextMonthBtn() {
 		return Calendar_NextMonthBtn;
@@ -196,9 +234,14 @@ public class StudentPage {
 		return SelectSupportType;
 	}
 	
-	public WebElement Student_courseDate() {
-		return Student_courseDate;
+	public WebElement Student_course_startDate() {
+		return Student_course_startDate;
 	}
+	
+	public WebElement Student_course_endDate() {
+		return Student_course_endDate;
+	}
+	
 	
 	public WebElement searchField() {
 		return searchField;
@@ -219,5 +262,18 @@ public class StudentPage {
 	public WebElement cnfrmYesBtn() {
 		return cnfrmYesBtn;
 	}
+	public WebElement selectBundleDropdown() {
+		return selectBundleDropdown;
+	}
 	
+	public WebElement AddLineBtn() {
+		return AddLineBtn;
+	}
+	public WebElement AssignDocPageTitle() {
+		return AssignDocPageTitle;
+	}
+	
+	public WebElement Document() {
+		return Document;
+	}
 }

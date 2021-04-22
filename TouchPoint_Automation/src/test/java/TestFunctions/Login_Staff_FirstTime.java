@@ -20,13 +20,13 @@ public class Login_Staff_FirstTime extends BaseClass {
 
 	
 	@Test
-	public void firstTimeLogin() {
+	public void firstTimeLogin() throws InterruptedException {
 		LoginPage objects = new LoginPage(driver);
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStaff()));
-		Read_OTP.OutlookMailReader("Inbox", "DSA OTP", 
-				"OTP for DSA is ", 6);
+		Read_OTP.OutlookMailReader("vishnuvsstf@gmail.com","Jeejams91@","Inbox", "Access Support Touchpoint OTP", 
+				"The OTP generated for your account is ", 6);
 		// Select the usertype for login
 		objects.SelectUserTypeStaff().click();
 		objects.EmailField().sendKeys(prop.getProperty("Staff_Email"));
@@ -42,16 +42,17 @@ public class Login_Staff_FirstTime extends BaseClass {
 				objects.EmailField().sendKeys(prop.getProperty("Staff_Email"));
 				objects.PasswordField().sendKeys(prop.getProperty("NewPwd"));
 				objects.LoginBtn().click();
+				Thread.sleep(3000);
 				wait.until(ExpectedConditions.elementToBeClickable(objects.agreeDocs()));
 				objects.agreeDocs().click();
 				// Verify the signed in user details
-				wait.until(ExpectedConditions.elementToBeClickable(objects.ProfileModule()));
-				objects.ProfileModule().click();
+				wait.until(ExpectedConditions.elementToBeClickable(objects.StaffProfileModule()));
+				objects.StaffProfileModule().click();
 				wait.until(ExpectedConditions.elementToBeClickable(objects.UserEmail()));
 				String UserEmail = objects.UserEmail().getText();
-				if (UserEmail.contentEquals(prop.getProperty("AdminEmail"))) {
-					Assert.assertEquals(UserEmail, prop.getProperty("AdminEmail"));
-					System.out.println("Verify login using valid username and password executed and passed successfully!!!     "
+				if (UserEmail.contentEquals(prop.getProperty("Staff_Email"))) {
+					Assert.assertEquals(UserEmail, prop.getProperty("Staff_Email"));
+					System.out.println("Verify staff first time login using valid username and password executed and passed successfully!!!     "
 							+ objects.UserName().getText() + " signed in successfully");
 				}
 

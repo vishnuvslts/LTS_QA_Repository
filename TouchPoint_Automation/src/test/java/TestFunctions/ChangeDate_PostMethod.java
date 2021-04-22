@@ -37,11 +37,11 @@ public class ChangeDate_PostMethod {
 		request.header("Content-Type", "application/json");
 		JSONObject json = new JSONObject();
 		json.put("email", "automationadmin@mailinator.com");
-		json.put("password", "654321Aa");
+		json.put("password", "654321AA");
 		json.put("userType", "admin");
 		
 		request.body(json.toJSONString());
-		Response responsefromLogin = request.post("https://dsaapitest.ycalabs.com/userLogin");
+		Response responsefromLogin = request.post("http://192.168.0.7:9001/userLogin");
 		responsefromLogin.prettyPrint();
 		
 		String jsonString = responsefromLogin.getBody().asString();
@@ -58,12 +58,12 @@ public class ChangeDate_PostMethod {
 		request.header("Authorization",token).header("Content-Type", "application/json");
 		
 		JSONObject json = new JSONObject();
-		json.put("name", "online video 2");
-		json.put("start", "2021-02-01 18:30:00");
-		json.put("end", "2021-02-01 20:30:00");
+		json.put("name", "Test Automation Session Request");
+		json.put("start", "2021-04-01 18:30:00");
+		json.put("end", "2021-04-01 20:30:00");
 		
 		request.body(json.toJSONString());
-		Response responseafterUpdate = request.post("https://dsaapitest.ycalabs.com/updatesessiontimes");
+		Response responseafterUpdate = request.post("http://192.168.0.7:9001/updatesessiontimes");
 		responseafterUpdate.prettyPrint();
 
 		

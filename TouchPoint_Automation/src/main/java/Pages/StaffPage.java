@@ -14,7 +14,7 @@ public class StaffPage {
 	}
 
 	// Common
-	@FindBy(xpath = "//a[@class='navbar-brand']")
+	@FindBy(xpath = "//img[@class='brand-logo']")
 	WebElement HomeBtn;
 	@FindBy(xpath = "//button[@class='save-btn']")
 	WebElement SaveBtn;
@@ -42,7 +42,7 @@ public class StaffPage {
 	@FindBy(xpath = "//div[@class='error-message']")
 	WebElement errorMsg;
 	// Add staff details
-	@FindBy(xpath = "//input[@placeholder='Enter first name']")
+	@FindBy(xpath = "//input[@id='addstaff_firstname']")
 	WebElement staff_firstname;
 	@FindBy(xpath = "//input[@placeholder='Enter last name']")
 	WebElement staff_lastname;
@@ -50,9 +50,9 @@ public class StaffPage {
 	WebElement staff_phone;
 	@FindBy(xpath = "//input[@placeholder='Enter last mobile']")
 	WebElement staff_mobile;
-	@FindBy(xpath = "//input[@placeholder='Enter sfe registered email']")
-	WebElement staff_SFEEmail;
-	@FindBy(xpath = "//textarea[@id='add_staff_address']")
+	@FindBy(xpath = "//input[@id='addstaff_email']")
+	WebElement staff_RegisteredEmail;
+	@FindBy(xpath = "//input[@id='addstaff_email']")
 	WebElement staff_address;
 	@FindBy(xpath = "//input[@id='add_staff_dateofbirth']")
 	WebElement staff_dob;
@@ -68,6 +68,27 @@ public class StaffPage {
 	
 	@FindBy(xpath = "//label[text()='Staff DBS Certificate']")
 	WebElement staff_DBSField;
+	
+	@FindBy(xpath = "//select[@id='addstaff_role1']")
+	WebElement staff_SelectRole;
+	
+	@FindBy(xpath = "//input[@id='addstaff_rate1']")
+	WebElement staff_EnterRateField;
+	
+	@FindBy(xpath = "//h4[text()='Assign Document']")
+	WebElement AssignDocPageTitle;
+	
+	@FindBy(xpath = "(//select[@id='bundle_document_cat'])[1]")
+	WebElement selectBundleDropdown;
+	
+	@FindBy(xpath = "//i[@class='ri-add-line']")
+	WebElement AddLineBtn;
+	@FindBy(xpath = "//div[@class='docs-area']")
+	WebElement Document;
+	
+	
+	
+	
 	
 	// common
 	public WebElement HomeBtn() {
@@ -134,8 +155,8 @@ public class StaffPage {
 		return staff_mobile;
 	}
 
-	public WebElement staff_SFEEmail() {
-		return staff_SFEEmail;
+	public WebElement staff_RegisteredEmail() {
+		return staff_RegisteredEmail;
 	}
 
 	public WebElement staff_address() {
@@ -162,5 +183,27 @@ public class StaffPage {
 	
 	public WebElement staff_DBSField() {
 		return staff_DBSField;
+	}
+	public WebElement staff_SelectRole() {
+		return staff_SelectRole;
+	}
+	public WebElement staff_EnterRateField() {
+		return staff_EnterRateField;
+	}
+	
+	
+	public WebElement selectBundleDropdown() {
+		return selectBundleDropdown;
+	}
+	
+	public WebElement AddLineBtn() {
+		return AddLineBtn;
+	}
+	public WebElement AssignDocPageTitle() {
+		return AssignDocPageTitle;
+	}
+	
+	public WebElement Document() {
+		return Document;
 	}
 }

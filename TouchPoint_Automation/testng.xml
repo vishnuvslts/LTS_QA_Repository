@@ -9,15 +9,21 @@
 
 			
 
-<test name="TC_002-Verify manage settings module as admin">
+<test name="TC_007-Sign in as staff and accept the event requested by student">
 		<classes>
-		<class name="TestFunctions.Login_Admin" />
-		<class name="TestFunctions.SettingsFunctions_Manage_Institution" />
-			<class name="TestFunctions.SettingsFunctions_Add_SupportType" />
-			<class name="TestFunctions.SettingsFunctions_Manage_Role" />
-			<class name="TestFunctions.SettingsFunctions_Delete_SupportType" />
-			<class name="TestFunctions.SettingsFunctions_Manage_FundingBody" />
-			<class name="TestFunctions.Logout" />
+		<class name="TestFunctions.Login_Student" />
+		<class name="TestFunctions.Student_CreateEvent" />
+		<class name="TestFunctions.Logout" />
+		<class name="TestFunctions.Login_Staff" />
+		<class name="TestFunctions.Staff_AcceptEvent" />
+		<class name="TestFunctions.Logout" />
+		<class name="TestFunctions.ChangeDate_PostMethod" />
+		<class name="TestFunctions.Login_Staff" />
+
+
+		
+			
+			
 			</classes>
 
 

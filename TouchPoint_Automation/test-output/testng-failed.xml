@@ -4,15 +4,14 @@
   <listeners>
     <listener class-name="Common.TestListener"/>
   </listeners>
-  <test thread-count="5" name="TC_002-Verify manage settings module as admin(failed)">
+  <test thread-count="5" name="TC_007-Sign in as staff and accept the event requested by student(failed)">
     <classes>
-      <class name="TestFunctions.SettingsFunctions_Manage_Institution">
+      <class name="TestFunctions.Staff_AcceptEvent">
         <methods>
-          <include name="editInstitution"/>
+          <include name="acceptEventJoblist"/>
           <include name="initDriver"/>
-          <include name="addInstitution"/>
         </methods>
-      </class> <!-- TestFunctions.SettingsFunctions_Manage_Institution -->
+      </class> <!-- TestFunctions.Staff_AcceptEvent -->
     </classes>
-  </test> <!-- TC_002-Verify manage settings module as admin(failed) -->
+  </test> <!-- TC_007-Sign in as staff and accept the event requested by student(failed) -->
 </suite> <!-- Failed suite [Suite] -->

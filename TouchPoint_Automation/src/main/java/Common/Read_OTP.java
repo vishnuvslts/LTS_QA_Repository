@@ -15,15 +15,11 @@ import javax.mail.Store;
 public class Read_OTP {
 	public static String searchText=null ;
 	
-	public static String OutlookMailReader(String mailFolderName,String emailSubjectContent, String emailContent, int lengthOfOTP) {
+	public static String OutlookMailReader(String username, String password, String mailFolderName,String emailSubjectContent, String emailContent, int lengthOfOTP) {
 
         
 		//mailFolderName(Eg- "INBOX"), emailSubjectContent(Eg- Mail for OTP),emailContent(Eg- OTP is 111111), OTP length(Eg- 6)
 		            String hostName = "smtp.gmail.com";//change it according to your mail
-
-		            String username = "vishnuvsstf@gmail.com";//username 
-
-		            String password = "Jeejams91@";
 
 		            int messageCount;
 
@@ -66,7 +62,7 @@ public class Read_OTP {
 
 		                    emailSubject = emailMessage.getSubject();
 		                    System.out.println(emailSubject);
-
+		                    System.out.println(emailSubjectContent);
 		                    if(emailSubject.contains(emailSubjectContent))
 
 		                    {

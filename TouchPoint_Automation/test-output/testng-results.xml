@@ -1,164 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="6" total="22" passed="15">
+<testng-results skipped="0" failed="0" ignored="4" total="12" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="146225" started-at="2021-04-21T10:29:17 IST" finished-at="2021-04-21T10:31:44 IST">
+  <suite name="Suite" duration-ms="21621" started-at="2021-04-22T14:11:05 IST" finished-at="2021-04-22T14:11:27 IST">
     <groups>
     </groups>
-    <test name="TC_002-Verify manage settings module as admin" duration-ms="146225" started-at="2021-04-21T10:29:17 IST" finished-at="2021-04-21T10:31:44 IST">
-      <class name="TestFunctions.SettingsFunctions_Manage_FundingBody">
-        <test-method status="PASS" signature="addFundingBody()[pri:1, instance:TestFunctions.SettingsFunctions_Manage_FundingBody@31206beb]" name="addFundingBody" duration-ms="10957" started-at="2021-04-21T10:31:04 IST" finished-at="2021-04-21T10:31:15 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addFundingBody -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Manage_FundingBody@31206beb]" name="updateStatus" duration-ms="8409" started-at="2021-04-21T10:31:15 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_FundingBody.addFundingBody" finished-at="2021-04-21T10:31:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editFundingBody()[pri:3, instance:TestFunctions.SettingsFunctions_Manage_FundingBody@31206beb]" name="editFundingBody" duration-ms="9298" started-at="2021-04-21T10:31:23 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_FundingBody.addFundingBody" finished-at="2021-04-21T10:31:32 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editFundingBody -->
-        <test-method status="PASS" signature="deleteFundingBody()[pri:4, instance:TestFunctions.SettingsFunctions_Manage_FundingBody@31206beb]" name="deleteFundingBody" duration-ms="6419" started-at="2021-04-21T10:31:32 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_FundingBody.editFundingBody" finished-at="2021-04-21T10:31:39 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteFundingBody -->
-      </class> <!-- TestFunctions.SettingsFunctions_Manage_FundingBody -->
-      <class name="TestFunctions.SettingsFunctions_Delete_SupportType">
-        <test-method status="PASS" signature="deleteSupportType()[pri:0, instance:TestFunctions.SettingsFunctions_Delete_SupportType@1dd02175]" name="deleteSupportType" duration-ms="8331" started-at="2021-04-21T10:30:55 IST" finished-at="2021-04-21T10:31:04 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSupportType -->
-      </class> <!-- TestFunctions.SettingsFunctions_Delete_SupportType -->
-      <class name="TestFunctions.SettingsFunctions_Manage_Role">
-        <test-method status="PASS" signature="addRole()[pri:1, instance:TestFunctions.SettingsFunctions_Manage_Role@11e21d0e]" name="addRole" duration-ms="10875" started-at="2021-04-21T10:30:24 IST" finished-at="2021-04-21T10:30:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addRole -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Manage_Role@11e21d0e]" name="updateStatus" duration-ms="6268" started-at="2021-04-21T10:30:35 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Role.addRole" finished-at="2021-04-21T10:30:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="PASS" signature="editRole()[pri:3, instance:TestFunctions.SettingsFunctions_Manage_Role@11e21d0e]" name="editRole" duration-ms="7842" started-at="2021-04-21T10:30:41 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Role.addRole" finished-at="2021-04-21T10:30:49 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editRole -->
-        <test-method status="PASS" signature="deleteRole()[pri:4, instance:TestFunctions.SettingsFunctions_Manage_Role@11e21d0e]" name="deleteRole" duration-ms="6816" started-at="2021-04-21T10:30:49 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Role.editRole" finished-at="2021-04-21T10:30:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteRole -->
-      </class> <!-- TestFunctions.SettingsFunctions_Manage_Role -->
-      <class name="TestFunctions.SettingsFunctions_Manage_Institution">
-        <test-method status="PASS" signature="addInstitution()[pri:1, instance:TestFunctions.SettingsFunctions_Manage_Institution@b59d31]" name="addInstitution" duration-ms="10916" started-at="2021-04-21T10:29:24 IST" finished-at="2021-04-21T10:29:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addInstitution -->
-        <test-method status="PASS" signature="updateStatus()[pri:2, instance:TestFunctions.SettingsFunctions_Manage_Institution@b59d31]" name="updateStatus" duration-ms="5554" started-at="2021-04-21T10:29:35 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Institution.addInstitution" finished-at="2021-04-21T10:29:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateStatus -->
-        <test-method status="FAIL" signature="editInstitution()[pri:3, instance:TestFunctions.SettingsFunctions_Manage_Institution@b59d31]" name="editInstitution" duration-ms="31648" started-at="2021-04-21T10:29:41 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Institution.addInstitution" finished-at="2021-04-21T10:30:12 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='toast-close-button']"}
-  (Session info: chrome=90.0.4430.72)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-9N55AFQ', ip: '10.8.0.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\LTS\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:55054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cd6a9af72ab0c4cbf53e600c5b41e0a
-*** Element info: {Using=xpath, value=//button[@class='toast-close-button']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='toast-close-button']"}
-  (Session info: chrome=90.0.4430.72)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-9N55AFQ', ip: '10.8.0.17', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\LTS\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:55054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cd6a9af72ab0c4cbf53e600c5b41e0a
-*** Element info: {Using=xpath, value=//button[@class='toast-close-button']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy8.click(Unknown Source)
-at TestFunctions.SettingsFunctions_Manage_Institution.editInstitution(SettingsFunctions_Manage_Institution.java:152)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editInstitution -->
-        <test-method status="PASS" signature="deleteInstitution()[pri:4, instance:TestFunctions.SettingsFunctions_Manage_Institution@b59d31]" name="deleteInstitution" duration-ms="6898" started-at="2021-04-21T10:30:12 IST" depends-on-methods="TestFunctions.SettingsFunctions_Manage_Institution.editInstitution" finished-at="2021-04-21T10:30:19 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteInstitution -->
-      </class> <!-- TestFunctions.SettingsFunctions_Manage_Institution -->
-      <class name="TestFunctions.Login_Admin">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Admin@4df828d7]" name="initDriver" is-config="true" duration-ms="8708" started-at="2021-04-21T10:29:09 IST" finished-at="2021-04-21T10:29:17 IST">
+    <test name="TC_007-Sign in as staff and accept the event requested by student" duration-ms="21621" started-at="2021-04-22T14:11:05 IST" finished-at="2021-04-22T14:11:27 IST">
+      <class name="TestFunctions.Login_Student">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Student@71a794e5]" name="initDriver" is-config="true" duration-ms="6663" started-at="2021-04-22T14:10:59 IST" finished-at="2021-04-22T14:11:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Admin@4df828d7]" name="verifyLogin" duration-ms="6669" started-at="2021-04-21T10:29:17 IST" finished-at="2021-04-21T10:29:24 IST">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Student@71a794e5]" name="verifyLogin" duration-ms="861" started-at="2021-04-22T14:11:05 IST" finished-at="2021-04-22T14:11:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.Login_Admin -->
-      <class name="TestFunctions.SettingsFunctions_Add_SupportType">
-        <test-method status="PASS" signature="addSupportType()[pri:1, instance:TestFunctions.SettingsFunctions_Add_SupportType@62fdb4a6]" name="addSupportType" duration-ms="4472" started-at="2021-04-21T10:30:19 IST" finished-at="2021-04-21T10:30:24 IST">
+      </class> <!-- TestFunctions.Login_Student -->
+      <class name="TestFunctions.Staff_AcceptEvent">
+        <test-method status="PASS" signature="staffVerifyEventInCalendar()[pri:1, instance:TestFunctions.Staff_AcceptEvent@b59d31]" name="staffVerifyEventInCalendar" duration-ms="2210" started-at="2021-04-22T14:11:19 IST" finished-at="2021-04-22T14:11:21 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addSupportType -->
-      </class> <!-- TestFunctions.SettingsFunctions_Add_SupportType -->
+        </test-method> <!-- staffVerifyEventInCalendar -->
+        <test-method status="PASS" signature="acceptEventJoblist()[pri:2, instance:TestFunctions.Staff_AcceptEvent@b59d31]" name="acceptEventJoblist" duration-ms="2288" started-at="2021-04-22T14:11:21 IST" finished-at="2021-04-22T14:11:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptEventJoblist -->
+      </class> <!-- TestFunctions.Staff_AcceptEvent -->
       <class name="TestFunctions.Logout">
-        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@3e77a1ed]" name="Logout" duration-ms="4683" started-at="2021-04-21T10:31:39 IST" finished-at="2021-04-21T10:31:44 IST">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@5e25a92e]" name="Logout" duration-ms="4006" started-at="2021-04-22T14:11:14 IST" finished-at="2021-04-22T14:11:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
       </class> <!-- TestFunctions.Logout -->
-    </test> <!-- TC_002-Verify manage settings module as admin -->
+      <class name="TestFunctions.ChangeDate_PostMethod">
+        <test-method status="PASS" signature="login_method()[pri:1, instance:TestFunctions.ChangeDate_PostMethod@62fdb4a6]" name="login_method" duration-ms="2998" started-at="2021-04-22T14:11:23 IST" finished-at="2021-04-22T14:11:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_method -->
+        <test-method status="PASS" signature="changedate_method()[pri:2, instance:TestFunctions.ChangeDate_PostMethod@62fdb4a6]" name="changedate_method" duration-ms="531" started-at="2021-04-22T14:11:26 IST" finished-at="2021-04-22T14:11:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changedate_method -->
+      </class> <!-- TestFunctions.ChangeDate_PostMethod -->
+      <class name="TestFunctions.Login_Staff">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Staff@4df828d7]" name="verifyLogin" duration-ms="786" started-at="2021-04-22T14:11:18 IST" finished-at="2021-04-22T14:11:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestFunctions.Login_Staff -->
+      <class name="TestFunctions.Student_CreateEvent">
+        <test-method status="PASS" signature="student_createevent()[pri:0, instance:TestFunctions.Student_CreateEvent@76329302]" name="student_createevent" duration-ms="7836" started-at="2021-04-22T14:11:06 IST" finished-at="2021-04-22T14:11:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- student_createevent -->
+      </class> <!-- TestFunctions.Student_CreateEvent -->
+    </test> <!-- TC_007-Sign in as staff and accept the event requested by student -->
   </suite> <!-- Suite -->
 </testng-results>
