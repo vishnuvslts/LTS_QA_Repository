@@ -152,6 +152,7 @@ public class Staff_AcceptEvent extends BaseClass {
 			Assert.fail();
 			System.out.println("Verification failed");
 		}
+		objects.HomeBtn().click();
 	}
 
 }

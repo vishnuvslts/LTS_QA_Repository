@@ -26,13 +26,13 @@ public class Student_CreateEvent extends BaseClass {
 		objects.StudentDashboard_Calendar().click();
 		select = new Select(objects.selectSupportDrpDwn());
 		select.selectByVisibleText(prop.getProperty("Staff_Student_SupportDetails"));
-		String firstWordTextNew = StringHelper.getCurrentSystemDate().substring(0,
-				StringHelper.getCurrentSystemDate().lastIndexOf(" - "));
-		String getCurMonthString = firstWordTextNew.substring(firstWordTextNew.lastIndexOf(" ") + 1);
-		String CalMonthYear = objects.CalMonth().getText();
-		String CurrMonthActual = CalMonthYear.substring(0, CalMonthYear.lastIndexOf(" "));
+		//String firstWordTextNew = StringHelper.getCurrentSystemDate().substring(0,
+				//StringHelper.getCurrentSystemDate().lastIndexOf(" - "));
+		//String getCurMonthString = firstWordTextNew.substring(firstWordTextNew.lastIndexOf(" ") + 1);
+		//String CalMonthYear = objects.CalMonth().getText();
+		//String CurrMonthActual = CalMonthYear.substring(0, CalMonthYear.lastIndexOf(" "));
 
-		if (CurrMonthActual.contains(getCurMonthString)) {
+
 			objects.CalendarFrwdBtn().click();
 			wait.until(ExpectedConditions.elementToBeClickable(objects.CreateEventDate()));
 			objects.CreateEventDate().click();
@@ -165,9 +165,7 @@ public class Student_CreateEvent extends BaseClass {
 				System.out.println("Verification failed");
 			}
 
-		} else {
-			System.out.println("fail");
-		}
+
 
 	}
 

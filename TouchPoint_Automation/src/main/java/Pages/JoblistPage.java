@@ -30,6 +30,33 @@ public class JoblistPage {
 	@FindBy(xpath = "//button[@class='view-table-btn view-table-yes-btn']")
 	WebElement acceptBtn;
 	
+	@FindBy(xpath = "//button[text()='Claim']")
+	WebElement claimBtn;
+	@FindBy(xpath = "//button[text()='Report']")
+	WebElement reportBtn;
+	@FindBy(xpath = "//button[@id='staff_timesheet_auth']")
+	WebElement studsignStatusBtn;
+	@FindBy(xpath = "//div[@class=' css-1wa3eu0-placeholder']")
+	WebElement MODSelectMenu;
+	@FindBy(xpath = "//div[@id='react-select-2-option-1']")
+	WebElement MODSelectOption;
+	
+	@FindBy(xpath = "//input[@id='joblist_break']")
+	WebElement breakinMins;
+	
+	@FindBy(xpath = "//input[@id='joblist_hoursworked']")
+	WebElement hoursWorked;
+	
+	@FindBy(xpath = "//textarea[@name='currentNote']")
+	WebElement currNotes;
+	
+	@FindBy(xpath = "//textarea[@name='futureNote']")
+	WebElement nextSessionNotes;
+	
+	@FindBy(xpath = "//button[@id='joblist_save']")
+	WebElement claimJobBtn;
+	
+	
 	
 	
 	
@@ -60,5 +87,46 @@ public class JoblistPage {
 	public WebElement acceptBtn() {
 		return acceptBtn;
 	}
+	
+	public WebElement claimJobBtn() {
+		return claimJobBtn;
+	}
+	
+	public WebElement nextSessionNotes() {
+		return nextSessionNotes;
+	}
+	
+	public WebElement currNotes() {
+		return currNotes;
+	}
+	
+	public WebElement hoursWorked() {
+		return hoursWorked;
+	}
+	
+	public WebElement breakinMins() {
+		return breakinMins;
+	}
+	
+	public WebElement MODSelectOption() {
+		return MODSelectOption;
+	}
+	
+	public WebElement MODSelectMenu() {
+		return MODSelectMenu;
+	}
+	
+	public WebElement studsignStatusBtn() {
+		return studsignStatusBtn;
+	}
+	
+	public WebElement reportBtn() {
+		return reportBtn;
+	}
+	
+	public WebElement claimBtn() {
+		return claimBtn;
+	}
+	
 	
 }

@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="Common.TestListener"/>
   </listeners>
-  <test thread-count="5" name="TC_007-Sign in as staff and accept the event requested by student(failed)">
+  <test thread-count="5" name="TC_012-Sign in as student and create a session request(failed)">
     <classes>
-      <class name="TestFunctions.Staff_AcceptEvent">
+      <class name="TestFunctions.Admin_TimesheetModule">
         <methods>
-          <include name="acceptEventJoblist"/>
+          <include name="verifyAdminTimesheet_StaffDetails"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- TestFunctions.Staff_AcceptEvent -->
+      </class> <!-- TestFunctions.Admin_TimesheetModule -->
     </classes>
-  </test> <!-- TC_007-Sign in as staff and accept the event requested by student(failed) -->
+  </test> <!-- TC_012-Sign in as student and create a session request(failed) -->
 </suite> <!-- Failed suite [Suite] -->

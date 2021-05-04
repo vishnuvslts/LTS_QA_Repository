@@ -199,6 +199,7 @@ public class AdminProfileFunctions extends BaseClass {
 		objects.ProfileUpdateBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastCloseBtn()));
 		objects.toastCloseBtn().click();
+		Thread.sleep(1000);
 
 	}
 

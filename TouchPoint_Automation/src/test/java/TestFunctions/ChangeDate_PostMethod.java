@@ -46,7 +46,6 @@ public class ChangeDate_PostMethod {
 		
 		String jsonString = responsefromLogin.getBody().asString();
 	    token = JsonPath.read(jsonString, "token");
-		System.out.println(token);
 		
 	}
 	
@@ -59,13 +58,11 @@ public class ChangeDate_PostMethod {
 		
 		JSONObject json = new JSONObject();
 		json.put("name", "Test Automation Session Request");
-		json.put("start", "2021-04-01 18:30:00");
-		json.put("end", "2021-04-01 20:30:00");
+		json.put("start", "2021-05-01 18:30:00");
+		json.put("end", "2021-05-01 20:30:00");
 		
 		request.body(json.toJSONString());
 		Response responseafterUpdate = request.post("http://192.168.0.7:9001/updatesessiontimes");
-		responseafterUpdate.prettyPrint();
-
 		
 	}
 

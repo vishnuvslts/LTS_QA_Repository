@@ -19,6 +19,8 @@ public class SettingsPage {
 	// Common items
 	@FindBy(xpath = "//button[@class='save-btn']")
 	WebElement SaveBtn;
+	@FindBy(xpath = "//button[@class='close-btn']")
+	WebElement windowCloseBtn;
 	@FindBy(xpath = "//div[@class='toast-message']")
 	WebElement toastMsg;
 	@FindBy(xpath = "//button[@class='toast-close-button']")
@@ -109,6 +111,18 @@ public class SettingsPage {
 		@FindBy(xpath = "//input[@id='file-9-0']")
 		WebElement UploadFile;
 		
+		@FindBy(xpath = "//button[@class='version-btn']")
+		WebElement editVersionBtn;
+		@FindBy(xpath = "//textarea[@class='version-description form-control']")
+		WebElement versionDescriptionField;
+		@FindBy(xpath = "//div[@id='root']/div[2]/div/div/div[2]/div/div/div[2]/div[2]/div/label/span")
+		WebElement root;
+		@FindBy(xpath = "//input[@id='versionFile']")
+		WebElement chooseFile;
+		@FindBy(xpath = "//button[@id='settings_docfile_update_submit']")
+		WebElement submitBtn;
+		
+		
 		//File Bundling
 		@FindBy(xpath = "//a[text()='File Bundling']")
 		WebElement FileBundlingSubModule;
@@ -133,6 +147,9 @@ public class SettingsPage {
 		
 	
 
+		public WebElement windowCloseBtn() {
+			return windowCloseBtn;
+		}
 	public WebElement SettingsModule() {
 		return SettingsModule;
 	}
@@ -314,5 +331,23 @@ public class SettingsPage {
 	public WebElement EnterFundingBodyDesc() {
 		return EnterFundingBodyDesc;
 	}
+	public WebElement editVersionBtn() {
+		return editVersionBtn;
+	}
+	public WebElement versionDescriptionField() {
+		return versionDescriptionField;
+	}
+	public WebElement chooseFile() {
+		return chooseFile;
+	}
+	public WebElement submitBtn() {
+		return submitBtn;
+	}
+	
+	public WebElement root() {
+		return root;
+	}
+	
+
 
 }

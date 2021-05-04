@@ -13,9 +13,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Common.BaseClass;
+import Common.StringHelper;
 import Pages.SettingsPage;
 
-public class SettingsFunctions_Add_DocumentFile extends BaseClass {
+public class SettingsFunctions_Edit_DocumentVersion extends BaseClass {
 
 	public static WebDriverWait wait;
 
@@ -29,43 +30,36 @@ public class SettingsFunctions_Add_DocumentFile extends BaseClass {
 		objects.SettingsModule().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.DocumentFileSubModule()));
 		objects.DocumentFileSubModule().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.AddNew()));
-		objects.AddNew().click();
-		wait.until(ExpectedConditions.elementToBeClickable(objects.EnterDocumentFileNameField()));
-		Select select = new Select(objects.SelectDocumentCategoryDropDown());
-		select.selectByVisibleText(prop.getProperty("DocumentCategory"));
-		objects.EnterDocumentFileNameField().sendKeys(prop.getProperty("DocumentFileName"));
-		// String FilePath = System.getProperty("user.dir"+"\\src\\test\\resources");
-		objects.BrowseFile().click();
-		Thread.sleep(2000);
-		objects.UploadFile().sendKeys(prop.getProperty("DocPath"));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.editVersionBtn()));
+		objects.editVersionBtn().click();
+		wait.until(ExpectedConditions.elementToBeClickable(objects.submitBtn()));
+		objects.versionDescriptionField().sendKeys(prop.getProperty("DocDesc")+StringHelper.getCurrentSystemDate());
+		objects.root().click();
+		objects.chooseFile().sendKeys(prop.getProperty("NewDocPath"));
+		Thread.sleep(1000);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ESCAPE);
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
-		objects.SaveBtn().click();
+		
+		objects.submitBtn().click();
 		wait.until(ExpectedConditions.elementToBeClickable(objects.toastMsg()));
+		objects.toastCloseBtn().click();
 		String toastsuccessMessage = objects.toastMsg().getText();
 		if (toastsuccessMessage.contentEquals("Document file added successfully")) {
 			Assert.assertEquals(toastsuccessMessage, "Document file added successfully");
 			System.out.println(
-					"Verify create document file executed and passed successfully!!!   " + toastsuccessMessage);
+					"Verify edit document version executed and passed successfully!!!   " + toastsuccessMessage);
 		}
 
-		else if (toastsuccessMessage.contentEquals("Category added successfully")) {
-			Assert.assertEquals(toastsuccessMessage, "Category added successfully");
-			System.out.println(
-					"Verify create document category executed and passed successfully!!!   " + toastsuccessMessage);
-		}
-
-		else if (toastsuccessMessage.contentEquals("Category name already exists")) {
-			Assert.assertEquals(toastsuccessMessage, "Category name already exists");
-
-		}
-
+		
 		else {
 			Assert.fail();
-			System.out.println("Verification failed");
+			System.out.println(toastsuccessMessage);
+
 		}
+		objects.windowCloseBtn().click();
+		
+		
 
 	}
 }

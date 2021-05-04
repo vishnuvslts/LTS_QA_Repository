@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,6 +50,12 @@ WebDriver driver ;
 	@FindBy(xpath= "//input[@id='resetpswd_confirm_pswd']")WebElement set_CnfrmPwd;
 	@FindBy(xpath= "//button[@id='resetpswd_submit']")WebElement subBtn;
 	@FindBy(xpath= "//button[@id='signdoc_accept']")WebElement agreeDocs;
+	@FindBy(xpath= "//button[@id='signdoc_accept']")List<WebElement> agreeDocsCount;
+	
+	public List<WebElement> agreeDocsCount()
+	{
+		return agreeDocsCount;
+	}
 	
 	public WebElement SelectUserTypeAdmin()
 	{

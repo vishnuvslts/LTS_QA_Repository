@@ -30,7 +30,7 @@ WebDriver driver ;
 	
 	//Select staff dropdown
 	@FindBy(xpath= "//select[@id='student_calendar_staff']")WebElement SelectStaffDropDown;
-	@FindBy(xpath= "//td[@data-date='2021-05-14']")WebElement CreateEventDate;
+	@FindBy(xpath= "//td[@data-date='2021-06-14']")WebElement CreateEventDate;
 	
 	//Create session window
 	@FindBy(xpath= "//h5[@class='modal-title']")WebElement CreateSessionWindowTitle;

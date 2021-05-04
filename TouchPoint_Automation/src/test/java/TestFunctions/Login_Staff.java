@@ -20,12 +20,12 @@ public class Login_Staff extends BaseClass {
 
 	
 	@Test
-	public void verifyLogin() {
+	public void verifyLogin() throws Exception {
 		LoginPage objects = new LoginPage(driver);
 
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStudent()));
+		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStaff()));
 
 		// Select the usertype for login
 		objects.SelectUserTypeStaff().click();
@@ -33,7 +33,11 @@ public class Login_Staff extends BaseClass {
 		objects.PasswordField().sendKeys(prop.getProperty("Password"));
 		wait.until(ExpectedConditions.elementToBeClickable(objects.LoginBtn()));
 		objects.LoginBtn().click();
-		
+
+		Thread.sleep(3000);
+		if(objects.agreeDocsCount().size()>0) {
+			objects.agreeDocs().click();	
+		}
 	}
 
 }
