@@ -20,11 +20,13 @@ public class Staff_FinanceModule extends BaseClass {
 	public static WebDriverWait wait;
 	public static Actions actions;
 	public static Select select;
-	public static int claimedhrs = 3;
-	public static int RoleRate = 10;
+
 
 	@Test(priority = 1)
 	public void verifyFinacePageDetails() throws Exception {
+		int claimedhrs = 3;
+		int missedHrs = 2;
+		int RoleRate = 10;
 
 		FinancePage objects = new FinancePage(driver);
 		wait = new WebDriverWait(driver, 10);
@@ -38,10 +40,14 @@ public class Staff_FinanceModule extends BaseClass {
 		String Actual_FinancePage_AmountEarned = objects.getAmountEarnedGeneric().getText();
 		String Actual_FinancePage_StudentName = objects.getStudentName().getText();
 		
-		if (Actual_FinancePage_HoursWorked.contentEquals(prop.getProperty("ClaimWorkedTime"))) {
-			Assert.assertEquals(Actual_FinancePage_HoursWorked, prop.getProperty("ClaimWorkedTime"));
-			System.out.println(
-					"Verify actual hours worked on staff finance page executed and passed successfully!!! ");
+		int totalhours = Integer.parseInt(Actual_FinancePage_HoursWorked);
+		System.out.println(totalhours);
+		System.out.println(missedHrs+claimedhrs);
+		
+		if (totalhours==(missedHrs+claimedhrs)) {
+			Assert.assertEquals(totalhours, (missedHrs+claimedhrs));
+						System.out.println(
+					"Verify total hours worked on staff finance page executed and passed successfully!!! ");
 
 		} else {
 			Assert.fail();
@@ -49,16 +55,7 @@ public class Staff_FinanceModule extends BaseClass {
 			
 		}
 		
-		if (Actual_FinancePage_AmountEarned.contentEquals(prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate))) {
-			Assert.assertEquals(Actual_FinancePage_AmountEarned, prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate));
-			System.out.println(
-					"Verify actual amount on staff finance page executed and passed successfully!!! ");
-
-		} else {
-			Assert.fail();
-			System.out.println(prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate));
-			
-		}
+		
 		
 		if (Actual_FinancePage_StudentName.contentEquals(prop.getProperty("Student_Fullname"))) {
 			Assert.assertEquals(Actual_FinancePage_StudentName, prop.getProperty("Student_Fullname"));
@@ -84,6 +81,10 @@ public class Staff_FinanceModule extends BaseClass {
 		String DetailsPage_GetAmount = objects.getAmountDetails().getText();
 		String DetailsPage_GetBreak = objects.getBreakDetails().getText();
 		String DetailsPage_GetTotalHours = objects.getTotalHoursDetails().getText();
+		String DetailsPage_Missed_Title = objects.getMissedSessionTitleDetails().getText();
+		String DetailsPage_Missed_Reason = objects.getMissedSessionReasonDetails().getText();
+		String DetailsPage_Missed_Amount = objects.getMissedAmountDetails().getText();
+		String DetailsPage_Missed_Duration = objects.getMissedHoursDetails().getText();
 
 		if (DetailsPage_GetStudentName.contentEquals(prop.getProperty("Student_Fullname"))) {
 			Assert.assertEquals(DetailsPage_GetStudentName, prop.getProperty("Student_Fullname"));
@@ -175,8 +176,8 @@ public class Staff_FinanceModule extends BaseClass {
 			
 		}
 		
-		if (DetailsPage_GetAmount.contentEquals(Actual_FinancePage_AmountEarned)) {
-			Assert.assertEquals(DetailsPage_GetAmount, Actual_FinancePage_AmountEarned);
+		if (DetailsPage_GetAmount.contentEquals(prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate))) {
+			Assert.assertEquals(DetailsPage_GetAmount, prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate));
 			System.out.println(
 					"Verify amount earned on finance view details page executed and passed successfully!!! ");
 
@@ -207,8 +208,63 @@ public class Staff_FinanceModule extends BaseClass {
 			System.out.println("Verification failed");
 			
 		}
+		if (DetailsPage_Missed_Title.contentEquals(prop.getProperty("EventTitleMissed"))) {
+			Assert.assertEquals(DetailsPage_Missed_Title, prop.getProperty("EventTitleMissed"));
+			System.out.println(
+					"Verify missed event title on finance view details page executed and passed successfully!!! ");
+
+		} else {
+			Assert.fail();
+			System.out.println(DetailsPage_Missed_Title);
+			
+		}
 		
+		if (DetailsPage_Missed_Reason.contentEquals(prop.getProperty("EventMissedReason"))) {
+			Assert.assertEquals(DetailsPage_Missed_Reason, prop.getProperty("EventMissedReason"));
+			System.out.println(
+					"Verify missed event title on finance view details page executed and passed successfully!!! ");
+
+		} else {
+			Assert.fail();
+			System.out.println("Verification failed");
+			
+		}
+		
+		if (DetailsPage_Missed_Amount.contentEquals(prop.getProperty("CurrencySymbol")+(missedHrs*RoleRate))) {
+			Assert.assertEquals(DetailsPage_Missed_Amount, prop.getProperty("CurrencySymbol")+(missedHrs*RoleRate));
+			System.out.println(
+					"Verify actual amount on staff finance page executed and passed successfully!!! ");
+
+		} else {
+			Assert.fail();
+			System.out.println(prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate));
+			
+		}
+		if (DetailsPage_Missed_Duration.contentEquals(prop.getProperty("EventMissedDuration"))) {
+			Assert.assertEquals(DetailsPage_Missed_Duration, prop.getProperty("EventMissedDuration"));
+			System.out.println(
+					"Verify missed event duration on finance view details page executed and passed successfully!!! ");
+
+		} else {
+			Assert.fail();
+			System.out.println(DetailsPage_Missed_Duration);
+			
+		}
+		String MisAmountSting = DetailsPage_Missed_Amount.substring(DetailsPage_Missed_Amount.length()-2);
+		int MissedAmount = Integer.parseInt(MisAmountSting);
+		String ClaimedAmountSting = DetailsPage_GetAmount.substring(DetailsPage_GetAmount.length()-2);
+		int ClaimedAmount = Integer.parseInt(ClaimedAmountSting);
 		objects.closeBtn().click();
+		if (Actual_FinancePage_AmountEarned.contentEquals(prop.getProperty("CurrencySymbol")+(MissedAmount+ClaimedAmount))) {
+			Assert.assertEquals(Actual_FinancePage_AmountEarned, prop.getProperty("CurrencySymbol")+(MissedAmount+ClaimedAmount));
+			System.out.println(
+					"Verify total amount on staff finance page executed and passed successfully!!! ");
+
+		} else {
+			Assert.fail();
+			System.out.println("Verification failed");
+			
+		}
 		
 	}
 

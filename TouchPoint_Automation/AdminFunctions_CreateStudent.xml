@@ -8,7 +8,7 @@
 	</listeners>
 
 
-	<test name="TC_004-Verify create student user as admin and sign in as student user for the first time by reseting the password">
+	<test name="TC_005-Verify create student user as admin and sign in as student user for the first time by reseting the password">
 		<classes>
 			<class name="TestFunctions.Login_Admin" />
 			<class name="TestFunctions.Student_CreateStudent" />

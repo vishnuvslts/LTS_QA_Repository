@@ -1,31 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="8" total="23" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9435" started-at="2021-05-04T12:06:03 IST" finished-at="2021-05-04T12:06:13 IST">
+  <suite name="Suite" duration-ms="99119" started-at="2021-05-19T17:05:15 IST" finished-at="2021-05-19T17:06:54 IST">
     <groups>
     </groups>
-    <test name="TC_012-Sign in as student and create a session request" duration-ms="9435" started-at="2021-05-04T12:06:03 IST" finished-at="2021-05-04T12:06:13 IST">
-      <class name="TestFunctions.Login_Admin">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Admin@33cb5951]" name="initDriver" is-config="true" duration-ms="4274" started-at="2021-05-04T12:05:59 IST" finished-at="2021-05-04T12:06:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Admin@33cb5951]" name="verifyLogin" duration-ms="1586" started-at="2021-05-04T12:06:03 IST" finished-at="2021-05-04T12:06:05 IST">
+    <test name="TC_006-Sign in as student and create a session request" duration-ms="14499" started-at="2021-05-19T17:05:15 IST" finished-at="2021-05-19T17:05:30 IST">
+      <class name="TestFunctions.Login_Student">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Student@365c30cc]" name="verifyLogin" duration-ms="4012" started-at="2021-05-19T17:05:15 IST" finished-at="2021-05-19T17:05:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- TestFunctions.Login_Admin -->
-      <class name="TestFunctions.Admin_TimesheetModule">
-        <test-method status="PASS" signature="verifyAdminTimesheet_StudentDetails()[pri:1, instance:TestFunctions.Admin_TimesheetModule@365c30cc]" name="verifyAdminTimesheet_StudentDetails" duration-ms="3265" started-at="2021-05-04T12:06:05 IST" finished-at="2021-05-04T12:06:08 IST">
+      </class> <!-- TestFunctions.Login_Student -->
+      <class name="TestFunctions.Logout">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@4148db48]" name="Logout" duration-ms="3920" started-at="2021-05-19T17:05:26 IST" finished-at="2021-05-19T17:05:30 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdminTimesheet_StudentDetails -->
-        <test-method status="PASS" signature="verifyAdminTimesheet_StaffDetails()[pri:2, instance:TestFunctions.Admin_TimesheetModule@365c30cc]" name="verifyAdminTimesheet_StaffDetails" duration-ms="4521" started-at="2021-05-04T12:06:08 IST" finished-at="2021-05-04T12:06:13 IST">
+        </test-method> <!-- Logout -->
+      </class> <!-- TestFunctions.Logout -->
+      <class name="TestFunctions.Student_CreateEvent">
+        <test-method status="PASS" signature="student_createevent()[pri:0, instance:TestFunctions.Student_CreateEvent@701fc37a]" name="student_createevent" duration-ms="6496" started-at="2021-05-19T17:05:19 IST" finished-at="2021-05-19T17:05:26 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdminTimesheet_StaffDetails -->
-      </class> <!-- TestFunctions.Admin_TimesheetModule -->
-    </test> <!-- TC_012-Sign in as student and create a session request -->
+        </test-method> <!-- student_createevent -->
+      </class> <!-- TestFunctions.Student_CreateEvent -->
+    </test> <!-- TC_006-Sign in as student and create a session request -->
+    <test name="TC_007-Sign in as staff and accept the event requested by student" duration-ms="14802" started-at="2021-05-19T17:05:30 IST" finished-at="2021-05-19T17:05:45 IST">
+      <class name="TestFunctions.Staff_AcceptEvent">
+        <test-method status="PASS" signature="staffVerifyEventInCalendar()[pri:1, instance:TestFunctions.Staff_AcceptEvent@1e9e725a]" name="staffVerifyEventInCalendar" duration-ms="2694" started-at="2021-05-19T17:05:34 IST" finished-at="2021-05-19T17:05:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- staffVerifyEventInCalendar -->
+        <test-method status="PASS" signature="acceptEventJoblist()[pri:2, instance:TestFunctions.Staff_AcceptEvent@1e9e725a]" name="acceptEventJoblist" duration-ms="1430" started-at="2021-05-19T17:05:37 IST" finished-at="2021-05-19T17:05:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptEventJoblist -->
+      </class> <!-- TestFunctions.Staff_AcceptEvent -->
+      <class name="TestFunctions.ChangeDate_PostMethodNormal">
+        <test-method status="PASS" signature="login_method()[pri:1, instance:TestFunctions.ChangeDate_PostMethodNormal@473b46c3]" name="login_method" duration-ms="2761" started-at="2021-05-19T17:05:42 IST" finished-at="2021-05-19T17:05:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_method -->
+        <test-method status="PASS" signature="changedate_method()[pri:2, instance:TestFunctions.ChangeDate_PostMethodNormal@473b46c3]" name="changedate_method" duration-ms="142" started-at="2021-05-19T17:05:45 IST" finished-at="2021-05-19T17:05:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changedate_method -->
+      </class> <!-- TestFunctions.ChangeDate_PostMethodNormal -->
+      <class name="TestFunctions.Logout">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@15d9bc04]" name="Logout" duration-ms="3938" started-at="2021-05-19T17:05:38 IST" finished-at="2021-05-19T17:05:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- TestFunctions.Logout -->
+      <class name="TestFunctions.Login_Staff">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Staff@146044d7]" name="verifyLogin" duration-ms="3814" started-at="2021-05-19T17:05:30 IST" finished-at="2021-05-19T17:05:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestFunctions.Login_Staff -->
+    </test> <!-- TC_007-Sign in as staff and accept the event requested by student -->
+    <test name="TC_008-Sign in as staff claim the session" duration-ms="34750" started-at="2021-05-19T17:05:45 IST" finished-at="2021-05-19T17:06:20 IST">
+      <class name="TestFunctions.Staff_ClaimEvent">
+        <test-method status="PASS" signature="staffVerifyEventInCalendar()[pri:1, instance:TestFunctions.Staff_ClaimEvent@23a5fd2]" name="staffVerifyEventInCalendar" duration-ms="6918" started-at="2021-05-19T17:06:09 IST" finished-at="2021-05-19T17:06:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- staffVerifyEventInCalendar -->
+      </class> <!-- TestFunctions.Staff_ClaimEvent -->
+      <class name="TestFunctions.Logout">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@78a2da20]" name="Logout" duration-ms="4026" started-at="2021-05-19T17:06:16 IST" finished-at="2021-05-19T17:06:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- TestFunctions.Logout -->
+      <class name="TestFunctions.Login_Staff">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Staff@62bd765]" name="verifyLogin" duration-ms="23796" started-at="2021-05-19T17:05:45 IST" finished-at="2021-05-19T17:06:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestFunctions.Login_Staff -->
+    </test> <!-- TC_008-Sign in as staff claim the session -->
+    <test name="TC_009-Sign in as student and authenticate the event " duration-ms="34379" started-at="2021-05-19T17:06:20 IST" finished-at="2021-05-19T17:06:54 IST">
+      <class name="TestFunctions.Login_Student">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:TestFunctions.Login_Student@7364985f]" name="initDriver" is-config="true" duration-ms="8513" started-at="2021-05-19T17:05:07 IST" finished-at="2021-05-19T17:05:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:TestFunctions.Login_Student@7364985f]" name="verifyLogin" duration-ms="23791" started-at="2021-05-19T17:06:20 IST" finished-at="2021-05-19T17:06:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestFunctions.Login_Student -->
+      <class name="TestFunctions.Logout">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:TestFunctions.Logout@709ba3fb]" name="Logout" duration-ms="3895" started-at="2021-05-19T17:06:51 IST" finished-at="2021-05-19T17:06:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- TestFunctions.Logout -->
+      <class name="TestFunctions.Student_AuthenticateEvent">
+        <test-method status="PASS" signature="studentAuthenticateEvent()[pri:1, instance:TestFunctions.Student_AuthenticateEvent@5d20e46]" name="studentAuthenticateEvent" duration-ms="6686" started-at="2021-05-19T17:06:44 IST" finished-at="2021-05-19T17:06:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- studentAuthenticateEvent -->
+      </class> <!-- TestFunctions.Student_AuthenticateEvent -->
+    </test> <!-- TC_009-Sign in as student and authenticate the event  -->
   </suite> <!-- Suite -->
 </testng-results>

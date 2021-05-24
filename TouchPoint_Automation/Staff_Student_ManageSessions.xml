@@ -7,6 +7,8 @@
 
 	<test
 		name="TC_006-Sign in as student and create a session request">
+		
+		
 		<classes>
 			<class name="TestFunctions.Login_Student" />
 			<class name="TestFunctions.Student_CreateEvent" />
@@ -20,7 +22,7 @@
 			<class name="TestFunctions.Login_Staff" />
 			<class name="TestFunctions.Staff_AcceptEvent" />
 			<class name="TestFunctions.Logout" />
-			<class name="TestFunctions.ChangeDate_PostMethod" />
+			<class name="TestFunctions.ChangeDate_PostMethodNormal" />
 		</classes>
 	</test> <!-- Test -->
 
@@ -32,11 +34,14 @@
 		</classes>
 	</test>
 
+
 	<test name="TC_009-Sign in as student and authenticate the event ">
 		<classes>
 			<class name="TestFunctions.Login_Student" />
 			<class name="TestFunctions.Student_AuthenticateEvent" />
 			<class name="TestFunctions.Logout" />
 		</classes>
+		
 	</test>
+	
 </suite> <!-- Suite -->

@@ -26,7 +26,7 @@ public class Login_Student_FirstTime extends BaseClass {
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStaff()));
 		Read_OTP.OutlookMailReader("vishnuvsadm@gmail.com","Jeejams91@","Inbox", "Access Support Touchpoint OTP", 
-				"The OTP generated for your account is ", 6);
+				"You can start accessing your account using this email and the initial password is ", 6);
 		// Select the usertype for login
 		objects.SelectUserTypeStudent().click();
 		objects.EmailField().sendKeys(prop.getProperty("Student_Email"));

@@ -26,6 +26,7 @@ public class Admin_TimesheetModule extends BaseClass {
 
 		int claimedhrs = 3;
 		int FBRate = 20;
+		int missedHrs = 2;
 
 		Admin_TimesheetPage objects = new Admin_TimesheetPage(driver);
 		wait = new WebDriverWait(driver, 10);
@@ -52,6 +53,11 @@ public class Admin_TimesheetModule extends BaseClass {
 			String DetailsPage_GetAmount = objects.getAmountDetails().getText();
 			String DetailsPage_GetBreak = objects.getBreakDetails().getText();
 			String DetailsPage_GetTotalHours = objects.getTotalHoursDetails().getText();
+			String DetailsPage_Missed_Title = objects.getMissedSessionTitleDetails().getText();
+			String DetailsPage_Missed_Reason = objects.getMissedSessionReasonDetails().getText();
+			String DetailsPage_Missed_Amount = objects.getMissedAmountDetails().getText();
+			String DetailsPage_Missed_Duration = objects.getMissedHoursDetails().getText();
+
 
 			if (DetailsPage_GetStaffName.contentEquals(prop.getProperty("Staff_Fullname"))) {
 				Assert.assertEquals(DetailsPage_GetStaffName, prop.getProperty("Staff_Fullname"));
@@ -162,6 +168,48 @@ public class Admin_TimesheetModule extends BaseClass {
 				System.out.println("Verification failed");
 
 			}
+			if (DetailsPage_Missed_Title.contentEquals(prop.getProperty("EventTitleMissed"))) {
+				Assert.assertEquals(DetailsPage_Missed_Title, prop.getProperty("EventTitleMissed"));
+				System.out.println(
+						"Verify missed event title on admin timesheet view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(DetailsPage_Missed_Title);
+				
+			}
+			
+			if (DetailsPage_Missed_Reason.contentEquals(prop.getProperty("EventMissedReason"))) {
+				Assert.assertEquals(DetailsPage_Missed_Reason, prop.getProperty("EventMissedReason"));
+				System.out.println(
+						"Verify missed event title on admin timesheet view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println("Verification failed");
+				
+			}
+			
+			if (DetailsPage_Missed_Amount.contentEquals(prop.getProperty("CurrencySymbol")+(missedHrs*FBRate))) {
+				Assert.assertEquals(DetailsPage_Missed_Amount, prop.getProperty("CurrencySymbol")+(missedHrs*FBRate));
+				System.out.println(
+						"Verify actual amount on staff admin timesheet page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(prop.getProperty("CurrencySymbol")+(claimedhrs*FBRate));
+				
+			}
+			if (DetailsPage_Missed_Duration.contentEquals(prop.getProperty("EventMissedDuration"))) {
+				Assert.assertEquals(DetailsPage_Missed_Duration, prop.getProperty("EventMissedDuration"));
+				System.out.println(
+						"Verify missed event duration on admin timesheet view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(DetailsPage_Missed_Duration);
+				
+			}
 
 		} else {
 			Assert.fail();
@@ -177,6 +225,7 @@ public class Admin_TimesheetModule extends BaseClass {
 
 		int claimedhrs = 3;
 		int RoleRate = 10;
+		int missedHrs = 2;
 
 		Admin_TimesheetPage objects = new Admin_TimesheetPage(driver);
 		Thread.sleep(2000);
@@ -198,6 +247,10 @@ public class Admin_TimesheetModule extends BaseClass {
 			String DetailsPage_GetAmount = objects.getAmountDetails().getText();
 			String DetailsPage_GetBreak = objects.getBreakDetails().getText();
 			String DetailsPage_GetTotalHours = objects.getTotalHoursDetails().getText();
+			String DetailsPage_Missed_Title = objects.getMissedSessionTitleDetails().getText();
+			String DetailsPage_Missed_Reason = objects.getMissedSessionReasonDetails().getText();
+			String DetailsPage_Missed_Amount = objects.getMissedAmountDetails().getText();
+			String DetailsPage_Missed_Duration = objects.getMissedHoursDetails().getText();
 
 			if (DetailsPage_GetStudentName.contentEquals(prop.getProperty("Student_Fullname"))) {
 				Assert.assertEquals(DetailsPage_GetStudentName, prop.getProperty("Student_Fullname"));
@@ -307,6 +360,49 @@ public class Admin_TimesheetModule extends BaseClass {
 				Assert.fail();
 				System.out.println("Verification failed");
 
+			}
+			
+			if (DetailsPage_Missed_Title.contentEquals(prop.getProperty("EventTitleMissed"))) {
+				Assert.assertEquals(DetailsPage_Missed_Title, prop.getProperty("EventTitleMissed"));
+				System.out.println(
+						"Verify missed event title on finance view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(DetailsPage_Missed_Title);
+				
+			}
+			
+			if (DetailsPage_Missed_Reason.contentEquals(prop.getProperty("EventMissedReason"))) {
+				Assert.assertEquals(DetailsPage_Missed_Reason, prop.getProperty("EventMissedReason"));
+				System.out.println(
+						"Verify missed event title on finance view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println("Verification failed");
+				
+			}
+			
+			if (DetailsPage_Missed_Amount.contentEquals(prop.getProperty("CurrencySymbol")+(missedHrs*RoleRate))) {
+				Assert.assertEquals(DetailsPage_Missed_Amount, prop.getProperty("CurrencySymbol")+(missedHrs*RoleRate));
+				System.out.println(
+						"Verify actual amount on staff finance page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(prop.getProperty("CurrencySymbol")+(claimedhrs*RoleRate));
+				
+			}
+			if (DetailsPage_Missed_Duration.contentEquals(prop.getProperty("EventMissedDuration"))) {
+				Assert.assertEquals(DetailsPage_Missed_Duration, prop.getProperty("EventMissedDuration"));
+				System.out.println(
+						"Verify missed event duration on finance view details page executed and passed successfully!!! ");
+
+			} else {
+				Assert.fail();
+				System.out.println(DetailsPage_Missed_Duration);
+				
 			}
 
 		} else {

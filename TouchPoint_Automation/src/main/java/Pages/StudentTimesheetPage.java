@@ -47,7 +47,7 @@ public class StudentTimesheetPage {
 	@FindBy(xpath = "//textarea[@id='joblist_nextsession_desc']")
 	WebElement getnextSessionNotes;
 	
-	@FindBy(xpath = "//button[@class='save-btn mr-2']")
+	@FindBy(xpath = "//button[@class='save-btn']")
 	WebElement studAuthBtn;
 	
 	@FindBy(xpath = "(//span[@class='checkmark'])[1]")

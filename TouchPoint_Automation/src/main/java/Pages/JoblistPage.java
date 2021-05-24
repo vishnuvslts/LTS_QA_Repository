@@ -56,7 +56,8 @@ public class JoblistPage {
 	@FindBy(xpath = "//button[@id='joblist_save']")
 	WebElement claimJobBtn;
 	
-	
+	@FindBy(xpath = "//input[@id='missed_reason']")
+	WebElement missedReason;
 	
 	
 	
@@ -126,6 +127,10 @@ public class JoblistPage {
 	
 	public WebElement claimBtn() {
 		return claimBtn;
+	}
+	
+	public WebElement missedReason() {
+		return missedReason;
 	}
 	
 	

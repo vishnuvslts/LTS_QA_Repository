@@ -25,11 +25,11 @@ public class Login_Staff_FirstTime extends BaseClass {
 		// Explicit wait
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.SelectUserTypeStaff()));
-		Read_OTP.OutlookMailReader("vishnuvsstf@gmail.com","Jeejams91@","Inbox", "Access Support Touchpoint OTP", 
-				"The OTP generated for your account is ", 6);
+		Read_OTP.OutlookMailReader("vishnuvsstf@gmail.com","Jeejams91@","Inbox", "Access Support Touchpoint OTP", "The OTP generated for your account is ", 6);
 		// Select the usertype for login
 		objects.SelectUserTypeStaff().click();
 		objects.EmailField().sendKeys(prop.getProperty("Staff_Email"));
+		System.out.println(Read_OTP.searchText);
 		objects.PasswordField().sendKeys(Read_OTP.searchText);
 		wait.until(ExpectedConditions.elementToBeClickable(objects.LoginBtn()));
 				objects.LoginBtn().click();

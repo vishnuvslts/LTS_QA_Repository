@@ -7,6 +7,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseClass {
@@ -20,8 +22,8 @@ public class BaseClass {
 		String ProjectPath = System.getProperty("user.dir");
 
 		// Initialize the driver
-		System.setProperty("webdriver.chrome.driver", ProjectPath + "/Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.edge.driver", ProjectPath + "/Drivers/msedgedriver.exe");
+		driver = new EdgeDriver();
 
 		// Loading the properties file
 		prop = new Properties();

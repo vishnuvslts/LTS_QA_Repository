@@ -69,8 +69,30 @@ public class FinancePage {
 	@FindBy(xpath = "(//td[@role='cell'])[14]")
 	WebElement getTotalHoursDetails;
 	
+	@FindBy(xpath = "(//td[@role='cell'])[15]")
+	WebElement getMissedSessionTitleDetails;
+	@FindBy(xpath = "(//td[@role='cell'])[18]")
+	WebElement getMissedSessionReasonDetails;
+	
+	@FindBy(xpath = "(//td[@role='cell'])[23]")
+	WebElement getMissedAmountDetails;
+	@FindBy(xpath = "(//td[@role='cell'])[25]")
+	WebElement getMissedHoursDetails;
+	
 	
 	// common
+	public WebElement getMissedSessionTitleDetails() {
+		return getMissedSessionTitleDetails;
+	}
+	public WebElement getMissedSessionReasonDetails() {
+		return getMissedSessionReasonDetails;
+	}
+	public WebElement getMissedAmountDetails() {
+		return getMissedAmountDetails;
+	}
+	public WebElement getMissedHoursDetails() {
+		return getMissedHoursDetails;
+	}
 	public WebElement HomeBtn() {
 		return HomeBtn;
 	}

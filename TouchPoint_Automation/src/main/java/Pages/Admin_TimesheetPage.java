@@ -73,6 +73,31 @@ public class Admin_TimesheetPage {
 	@FindBy(xpath = "(//td[@role='cell'])[12]")
 	WebElement getTotalHoursDetails;
 	
+	@FindBy(xpath = "(//td[@role='cell'])[14]")
+	WebElement getMissedSessionTitleDetails;
+	@FindBy(xpath = "(//td[@role='cell'])[19]")
+	WebElement getMissedSessionReasonDetails;
+	
+	@FindBy(xpath = "(//td[@role='cell'])[17]")
+	WebElement getMissedAmountDetails;
+	@FindBy(xpath = "(//td[@role='cell'])[24]")
+	WebElement getMissedHoursDetails;
+	
+	
+	// common
+	public WebElement getMissedSessionTitleDetails() {
+		return getMissedSessionTitleDetails;
+	}
+	public WebElement getMissedSessionReasonDetails() {
+		return getMissedSessionReasonDetails;
+	}
+	public WebElement getMissedAmountDetails() {
+		return getMissedAmountDetails;
+	}
+	public WebElement getMissedHoursDetails() {
+		return getMissedHoursDetails;
+	}
+	
 	
 	// common
 	public WebElement HomeBtn() {

@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="Common.TestListener"/>
   </listeners>
-  <test thread-count="5" name="TC_012-Sign in as student and create a session request(failed)">
+  <test thread-count="5" name="TC_004-Verify create student user as admin and sign in as student user for the first time by reseting the password(failed)">
     <classes>
-      <class name="TestFunctions.Admin_TimesheetModule">
+      <class name="TestFunctions.Login_Student_FirstTime">
         <methods>
-          <include name="verifyAdminTimesheet_StaffDetails"/>
+          <include name="firstTimeLogin"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- TestFunctions.Admin_TimesheetModule -->
+      </class> <!-- TestFunctions.Login_Student_FirstTime -->
     </classes>
-  </test> <!-- TC_012-Sign in as student and create a session request(failed) -->
+  </test> <!-- TC_004-Verify create student user as admin and sign in as student user for the first time by reseting the password(failed) -->
 </suite> <!-- Failed suite [Suite] -->
